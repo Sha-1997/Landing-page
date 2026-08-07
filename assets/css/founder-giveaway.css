@@ -1,0 +1,162 @@
+/* Founder Giveaway BEM Styles - JovianeX Landing Page */
+
+.founder-giveaway {
+  position: relative;
+  z-index: 1;
+}
+
+.founder-giveaway__container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: flex-start;
+  gap: var(--space-64);
+}
+
+.founder-giveaway__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-20);
+}
+
+.founder-giveaway__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  background-color: var(--color-primary-glow);
+  border: 1px solid var(--border-color-glow);
+  padding: var(--space-4) var(--space-12);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+}
+
+.founder-giveaway__title {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.founder-giveaway__desc {
+  font-size: var(--fs-body-lg);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 2. TIMELINE PROGRESSION TREE */
+.founder-giveaway__timeline {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  padding-left: var(--space-24);
+  margin-top: var(--space-24);
+}
+
+.founder-giveaway__timeline-line {
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  width: 2px;
+  height: calc(100% - 16px);
+  background: linear-gradient(180deg, var(--color-primary) 0%, rgba(255, 255, 255, 0.05) 100%);
+  z-index: 1;
+}
+
+.founder-giveaway__timeline-item {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  transition: all var(--transition-normal);
+}
+
+.founder-giveaway__timeline-marker {
+  position: absolute;
+  top: 14px;
+  left: -24px;
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-surface);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transform: translateX(-50%);
+  transition: all var(--transition-normal);
+  z-index: 3;
+}
+
+.founder-giveaway__timeline-content {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-16);
+  transition: all var(--transition-normal);
+}
+
+/* Active status overrides */
+.founder-giveaway__timeline-item--active .founder-giveaway__timeline-marker {
+  background-color: var(--bg-secondary);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-glow-primary);
+  width: 16px;
+  height: 16px;
+  top: 12px;
+}
+
+.founder-giveaway__timeline-item--active .founder-giveaway__timeline-content {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color-glow);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 3. RIGHT COLUMN PRIZE CARD */
+.founder-giveaway__right {
+  width: 100%;
+}
+
+.founder-giveaway__prize-card {
+  background-color: var(--bg-secondary);
+}
+
+/* Tablet & Mobile responsive adaptations */
+@media (max-width: 1024px) {
+  .founder-giveaway__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-48);
+  }
+
+  .founder-giveaway__left {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .founder-giveaway__timeline {
+    padding-left: var(--space-16);
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .founder-giveaway__timeline-marker {
+    left: -16px;
+  }
+
+  .founder-giveaway__timeline-line {
+    left: 0;
+  }
+
+  .founder-giveaway__timeline-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-12);
+  }
+  
+  .founder-giveaway__right {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,75 @@
+<!-- LP-014: ENTERPRISE FAQ, TRUST CENTER & FINAL CTA SECTION -->
+<section id="faq" class="section faq reveal">
+  <div class="container faq__container">
+    
+    <!-- Left Column: FAQ Accordion & Search Filter -->
+    <div class="faq__left">
+      <div class="launch-badge faq__badge">✨ Help Center</div>
+      
+      <h2 class="text-h2 faq__title">Frequently Asked<br>Questions</h2>
+      
+      <p class="text-lead faq__desc">
+        Have questions about the JovianeX ecosystem launch plans or founder options? Find immediate answers below.
+      </p>
+
+      <!-- Mockup search input wrapper -->
+      <div class="faq__search-wrapper flex" style="width: 100%; margin-top: var(--space-16);">
+        <input type="text" id="faq-search-input" class="form-input name-challenge__input" placeholder="🔍 Search questions (e.g. Founder, Payment)..." style="background-color: var(--bg-surface);">
+      </div>
+
+      <!-- Target accordion container populated dynamically from script config -->
+      <div id="faq-accordion-container" class="faq__accordion flex flex-column" style="gap: var(--space-12); width: 100%; margin-top: var(--space-20);">
+        <!-- JavaScript loads accordion nodes here -->
+        <p class="text-muted text-xs">Loading help resources...</p>
+      </div>
+    </div>
+
+    <!-- Right Column: Trust Center & Final CTA Card -->
+    <div class="faq__right flex flex-column" style="gap: var(--space-24);">
+      
+      <!-- Trust Center Panel -->
+      <div class="card faq__trust-card" style="border-color: rgba(255,255,255,0.06); padding: var(--space-24);">
+        <h4 class="text-small" style="font-weight: var(--fw-semibold); margin: 0; border-bottom: 1px solid var(--border-color); padding-bottom: var(--space-xs); margin-bottom: var(--space-md);">🛡️ Trust & Security Center</h4>
+        
+        <ul class="flex flex-column" style="gap: var(--space-16); list-style: none; padding: 0; margin: 0;">
+          <li class="flex align-start" style="gap: var(--space-12);">
+            <span style="font-size: 1.1rem;">🔒</span>
+            <div>
+              <h5 class="text-xs" style="font-weight: bold; margin: 0; color: var(--text-primary);">Secure Payments</h5>
+              <p class="text-muted text-xs" style="margin: 0; margin-top: var(--space-2);">SSL transactions verified by certified local gateways.</p>
+            </div>
+          </li>
+          <li class="flex align-start" style="gap: var(--space-12);">
+            <span style="font-size: 1.1rem;">🔑</span>
+            <div>
+              <h5 class="text-xs" style="font-weight: bold; margin: 0; color: var(--text-primary);">Encrypted Data</h5>
+              <p class="text-muted text-xs" style="margin: 0; margin-top: var(--space-2);">AES-256 databases storing profile details securely.</p>
+            </div>
+          </li>
+          <li class="flex align-start" style="gap: var(--space-12);">
+            <span style="font-size: 1.1rem;">🪪</span>
+            <div>
+              <h5 class="text-xs" style="font-weight: bold; margin: 0; color: var(--text-primary);">Unified Identity ID</h5>
+              <p class="text-muted text-xs" style="margin: 0; margin-top: var(--space-2);">One login key unlocks all ecosystem modules.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Final CTA Onboarding card -->
+      <div class="card faq__cta-card text-center flex flex-column align-center" style="border-color: var(--color-secondary); padding: var(--space-32); gap: var(--space-16); background-color: var(--bg-secondary);">
+        <h3 class="text-gradient" style="font-size: 1.5rem; font-weight: 800; margin: 0; line-height: 1.2;">Ready to Join the<br>Future of AI?</h3>
+        <p class="text-muted text-xs" style="margin: 0; max-width: 320px;">
+          Lock in your Founder launch prices or create a free credentials account to participate in campaigns.
+        </p>
+        
+        <div class="flex flex-column" style="gap: var(--space-12); width: 100%; margin-top: var(--space-8);">
+          <a href="#pricing" class="btn btn-secondary w-full" style="padding: var(--space-12);">Become a Founder Member</a>
+          <a href="#access" class="btn btn-outline w-full" style="padding: var(--space-12);">Create Free Account</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

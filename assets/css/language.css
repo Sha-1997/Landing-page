@@ -1,0 +1,418 @@
+/* =====================================================
+   JovianeX Landing Page
+   Multi Language Typography + Overflow Support
+===================================================== */
+
+
+/* ===============================
+   English (Default)
+================================ */
+
+html.lang-en body {
+
+    font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    line-height:1.6;
+
+}
+
+
+
+/* ===============================
+   Arabic
+================================ */
+
+html.lang-ar {
+
+    direction:rtl;
+    font-size:95%;
+
+}
+
+
+html.lang-ar body {
+
+    font-family:
+    "Noto Kufi Arabic",
+    Arial,
+    sans-serif;
+
+    line-height:1.45;
+
+}
+
+
+html.lang-ar h1,
+html.lang-ar h2,
+html.lang-ar h3 {
+
+    line-height:1.25;
+
+}
+
+
+
+/* ===============================
+   Hindi
+================================ */
+
+html.lang-hi {
+
+    font-size:95%;
+
+}
+
+
+html.lang-hi body {
+
+    font-family:
+    "Noto Sans Devanagari",
+    Arial,
+    sans-serif;
+
+    line-height:1.45;
+
+}
+
+
+html.lang-hi h1,
+html.lang-hi h2,
+html.lang-hi h3 {
+
+    line-height:1.25;
+
+}
+
+
+
+/* ===============================
+   Tamil
+================================ */
+
+html.lang-ta {
+
+    font-size:95%;
+
+}
+
+
+html.lang-ta body {
+
+    font-family:
+    "Noto Sans Tamil",
+    Arial,
+    sans-serif;
+
+    line-height:1.45;
+
+}
+
+
+html.lang-ta h1,
+html.lang-ta h2,
+html.lang-ta h3 {
+
+    line-height:1.2;
+
+}
+
+
+
+/* ===============================
+   Malayalam
+================================ */
+
+html.lang-ml {
+
+    font-size:72%;
+
+}
+
+
+html.lang-ml body {
+
+    font-family:
+    "Noto Sans Malayalam",
+    Arial,
+    sans-serif;
+
+    line-height:1.35;
+
+}
+
+
+html.lang-ml h1,
+html.lang-ml h2,
+html.lang-ml h3 {
+
+    line-height:1.15;
+
+}
+
+
+html.lang-ml p {
+
+    line-height:1.35;
+
+}
+
+
+
+/* ===============================
+   Tamil + Malayalam Text Wrap
+================================ */
+
+html.lang-ta h1,
+html.lang-ta h2,
+html.lang-ta h3,
+html.lang-ta h4,
+html.lang-ta p,
+html.lang-ta span,
+html.lang-ta li,
+html.lang-ta a,
+
+html.lang-ml h1,
+html.lang-ml h2,
+html.lang-ml h3,
+html.lang-ml h4,
+html.lang-ml p,
+html.lang-ml span,
+html.lang-ml li,
+html.lang-ml a {
+
+    white-space:normal;
+    overflow-wrap:break-word;
+    word-break:normal;
+
+}
+
+
+
+/* ===============================
+   Flex Text Protection
+================================ */
+
+html.lang-ta .flex > *,
+html.lang-ml .flex > * {
+
+    min-width:0;
+
+}
+
+
+
+/* ===============================
+   Links & Buttons
+================================ */
+
+html.lang-ta a,
+html.lang-ta button,
+html.lang-ml a,
+html.lang-ml button {
+
+    white-space:normal;
+    word-break:break-word;
+
+}
+
+
+
+/* ===============================
+   Hero Section
+================================ */
+
+html.lang-ta .hero-title {
+
+    line-height:1.15;
+
+}
+
+
+html.lang-ml .hero-title {
+
+    line-height:1.2;
+
+}
+
+
+
+/* ===============================
+   Horizontal Overflow
+================================ */
+
+html.lang-ta body,
+html.lang-ml body {
+
+    overflow-x:hidden;
+
+}
+
+
+
+/* ===============================
+   Desktop Adjustments
+================================ */
+
+@media(min-width:769px){
+
+
+    html.lang-ta body {
+
+        line-height:1.4;
+
+    }
+
+
+    html.lang-ta h1,
+    html.lang-ta h2,
+    html.lang-ta h3 {
+
+        line-height:1.2;
+
+    }
+
+
+    html.lang-ta p {
+
+        line-height:1.45;
+
+    }
+
+
+}
+
+
+
+/* ===============================
+   Mobile Adjustments
+================================ */
+
+@media(max-width:768px){
+
+
+    html.lang-ar,
+    html.lang-hi,
+    html.lang-ta {
+
+        font-size:92%;
+
+    }
+
+
+    html.lang-ml {
+
+        font-size:68%;
+
+    }
+
+
+    html.lang-ta body {
+
+        line-height:1.35;
+
+    }
+
+
+    html.lang-ml body {
+
+        line-height:1.3;
+
+    }
+
+
+    html.lang-ta .hero-title,
+    html.lang-ml .hero-title {
+
+        font-size:90%;
+
+    }
+
+
+}
+
+/* =================================
+   Tamil Mobile Only Fix
+================================= */
+
+@media(max-width:768px){
+
+    html.lang-ta body {
+
+        overflow-x:hidden;
+
+    }
+
+
+    html.lang-ta section {
+
+        width:100%;
+        max-width:100%;
+        overflow:hidden;
+
+    }
+
+
+    /* Text wrapping */
+
+    html.lang-ta h1,
+    html.lang-ta h2,
+    html.lang-ta h3,
+    html.lang-ta h4,
+    html.lang-ta p,
+    html.lang-ta span,
+    html.lang-ta li,
+    html.lang-ta a {
+
+        white-space:normal;
+        overflow-wrap:break-word;
+        word-break:normal;
+
+    }
+
+
+    /* Flex layout */
+
+    html.lang-ta .flex {
+
+        min-width:0;
+
+    }
+
+
+    html.lang-ta .flex > * {
+
+        min-width:0;
+
+    }
+
+
+    /* Hero */
+
+    html.lang-ta .hero-title {
+
+        line-height:1.15;
+
+    }
+
+
+    html.lang-ta .hero-description {
+
+        line-height:1.35;
+
+    }
+
+
+    /* Buttons */
+
+    html.lang-ta button,
+    html.lang-ta .btn {
+
+        max-width:100%;
+        white-space:normal;
+
+    }
+
+}

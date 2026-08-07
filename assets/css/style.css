@@ -1,0 +1,105 @@
+/* Master stylesheet aggregator - JovianeX Landing Page */
+
+@import url('reset.css');
+@import url('variables.css');
+@import url('typography.css');
+@import url('layout.css');
+@import url('utilities.css');
+@import url('buttons.css');
+@import url('forms.css');
+@import url('cards.css');
+@import url('animations.css');
+@import url('responsive.css');
+@import url('header.css');
+@import url('hero.css');
+@import url('ecosystem.css');
+@import url('ai-jobs.css');
+@import url('founder-membership.css');
+@import url('pricing-timeline.css');
+@import url('free-registration.css');
+@import url('name-challenge.css');
+@import url('founder-giveaway.css');
+@import url('referral-program.css');
+@import url('ecosystem-roadmap.css');
+@import url('faq.css');
+@import url('footer.css');
+
+/* Global custom rules */
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Background glows system base overlays */
+.glow-backdrop-primary {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  border-radius: var(--radius-full);
+  background: radial-gradient(circle, var(--color-primary-glow) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-backdrop-secondary {
+  position: absolute;
+  top: 40%;
+  right: -10%;
+  width: 50vw;
+  height: 50vw;
+  border-radius: var(--radius-full);
+  background: radial-gradient(circle, var(--color-secondary-glow) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+/* Language Switcher */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.language-switcher select {
+  height: 38px;
+  padding: 0 35px 0 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: transparent;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 20 20'%3E%3Cpath fill='%23666' d='M5 7l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+/* Dropdown options */
+.language-switcher select option {
+  color: #111;
+  background: #fff;
+}
+
+
+/* Mobile */
+@media (max-width: 991px) {
+
+  .language-switcher {
+    margin-left: 10px;
+  }
+
+  .language-switcher select {
+    height: 34px;
+    font-size: 13px;
+    padding-left: 10px;
+  }
+
+}
+
+

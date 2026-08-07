@@ -1,0 +1,21 @@
+{
+  "short_name": "JovianeX",
+  "name": "JovianeX AI Ecosystem Landing Page",
+  "icons": [
+    {
+      "src": "assets/img/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/img/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#0a0a0c",
+  "theme_color": "#1a1b1e",
+  "display": "standalone",
+  "orientation": "portrait"
+}

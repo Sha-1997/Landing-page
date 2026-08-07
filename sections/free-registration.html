@@ -1,0 +1,151 @@
+<!-- LP-009: FREE REGISTRATION & ONBOARDING SECTION -->
+<section id="access" class="section registration reveal">
+  <div class="container registration__container">
+    
+    <!-- Left Column: Registration Benefits & Journey Progress -->
+    <div class="registration__info">
+      <div class="launch-badge registration__badge">✨ Free Registration</div>
+      
+      <h2 class="text-h2 registration__title">Create Your JovianeX<br>Account in Minutes</h2>
+      
+      <p class="text-lead registration__desc">
+        Explore the growing AI ecosystem, participate in the upcoming Name Challenge campaigns, and manage your modules from a single unified portal.
+      </p>
+
+      <!-- Onboarding visual progression roadmap -->
+      <div class="registration__journey flex flex-column" style="gap: var(--space-12); width: 100%; margin-top: var(--space-20);">
+        <h4 class="text-small" style="font-weight: var(--fw-bold); margin: 0; margin-bottom: var(--space-4);">Your Onboarding Journey</h4>
+        
+        <div class="registration__journey-item registration__journey-item--active flex align-center" style="gap: var(--space-12);">
+          <div class="registration__journey-step">1</div>
+          <span class="text-small" style="font-weight: 600;">Create Free Account</span>
+        </div>
+        <div class="registration__journey-item flex align-center" style="gap: var(--space-12); opacity: 0.5;">
+          <div class="registration__journey-step">2</div>
+          <span class="text-small">Verify Email & Mobile Credentials</span>
+        </div>
+        <div class="registration__journey-item flex align-center" style="gap: var(--space-12); opacity: 0.5;">
+          <div class="registration__journey-step">3</div>
+          <span class="text-small">Complete Your AI Jobs Profile</span>
+        </div>
+        <div class="registration__journey-item flex align-center" style="gap: var(--space-12); opacity: 0.5;">
+          <div class="registration__journey-step">4</div>
+          <span class="text-small">Upgrade to Founder Membership (Optional)</span>
+        </div>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="registration__trust flex" style="gap: var(--space-16); margin-top: var(--space-24); flex-wrap: wrap;">
+        <span class="text-muted text-xs">🛡️ Secure Account</span>
+        <span class="text-muted text-xs">🔑 Encrypted Data</span>
+        <span class="text-muted text-xs">🪪 Unified Identity ID</span>
+      </div>
+    </div>
+
+    <!-- Right Column: Registration Input Form -->
+    <div class="registration__form-wrapper card" style="border-color: rgba(255,255,255,0.06);">
+      <form id="registration-form" class="registration__form flex flex-column" style="gap: var(--space-16);" novalidate>
+        
+        <!-- Row 1: Full Name -->
+        <div class="registration__form-group flex flex-column" style="gap: var(--space-4);">
+          <label for="reg-name" class="text-xs text-muted" style="font-weight: 600;">Full Name</label>
+          <input type="text" id="reg-name" class="form-input registration__input" placeholder="John Doe" required>
+          <span class="registration__error text-xs" id="err-name" style="color: var(--color-error); display: none;" aria-live="polite"></span>
+        </div>
+
+        <!-- Row 2: Email Address -->
+        <div class="registration__form-group flex flex-column" style="gap: var(--space-4);">
+          <label for="reg-email" class="text-xs text-muted" style="font-weight: 600;">Email Address</label>
+          <input type="email" id="reg-email" class="form-input registration__input" placeholder="john@example.com" required>
+          <span class="registration__error text-xs" id="err-email" style="color: var(--color-error); display: none;" aria-live="polite"></span>
+        </div>
+
+        <!-- Row 3: Mobile & Country selector -->
+        <div class="grid grid-cols-2" style="gap: var(--space-12);">
+          
+          <div class="registration__form-group flex flex-column" style="gap: var(--space-4);">
+            <label for="reg-country" class="text-xs text-muted" style="font-weight: 600;">Country</label>
+            <select id="reg-country" class="form-input registration__input registration__select" required>
+              <option value="" disabled selected>Select country</option>
+              <option value="AE">United Arab Emirates</option>
+              <option value="SA">Saudi Arabia</option>
+              <option value="IN">India</option>
+              <option value="QA">Qatar</option>
+              <option value="KW">Kuwait</option>
+              <option value="BH">Bahrain</option>
+              <option value="OM">Oman</option>
+              <option value="OTHER">Others</option>
+            </select>
+            <span class="registration__error text-xs" id="err-country" style="color: var(--color-error); display: none;" aria-live="polite"></span>
+          </div>
+
+          <div class="registration__form-group flex flex-column" style="gap: var(--space-4);">
+            <label for="reg-mobile" class="text-xs text-muted" style="font-weight: 600;">Mobile Number</label>
+            <input type="tel" id="reg-mobile" class="form-input registration__input" placeholder="+971 50 000 0000" required>
+            <span class="registration__error text-xs" id="err-mobile" style="color: var(--color-error); display: none;" aria-live="polite"></span>
+          </div>
+
+        </div>
+
+        <!-- Row 4: Passwords -->
+        <div class="grid grid-cols-2" style="gap: var(--space-12);">
+          
+          <div class="registration__form-group flex flex-column" style="gap: var(--space-4);">
+            <label for="reg-password" class="text-xs text-muted" style="font-weight: 600;">Password</label>
+            <input type="password" id="reg-password" class="form-input registration__input" placeholder="Min 8 chars" required>
+            <span class="registration__error text-xs" id="err-password" style="color: var(--color-error); display: none;" aria-live="polite"></span>
+          </div>
+
+          <div class="registration__form-group flex flex-column" style="gap: var(--space-4);">
+            <label for="reg-confirm" class="text-xs text-muted" style="font-weight: 600;">Confirm Password</label>
+            <input type="password" id="reg-confirm" class="form-input registration__input" placeholder="Repeat password" required>
+            <span class="registration__error text-xs" id="err-confirm" style="color: var(--color-error); display: none;" aria-live="polite"></span>
+          </div>
+
+        </div>
+
+        <!-- Password Strength Meter -->
+        <div class="registration__strength-wrapper flex flex-column" style="gap: var(--space-4);">
+          <div class="flex justify-between align-center">
+            <span class="text-xs text-muted">Password Strength:</span>
+            <span class="text-xs" id="reg-strength-label" style="font-weight: bold; color: var(--text-muted);">None</span>
+          </div>
+          <div class="registration__strength-bar-bg" style="height: 4px; background-color: var(--bg-surface); border-radius: 2px; overflow: hidden; position: relative;">
+            <div class="registration__strength-bar" id="reg-strength-bar" style="position: absolute; top: 0; left: 0; height: 100%; width: 0%; background-color: var(--color-error); transition: all 0.3s ease;"></div>
+          </div>
+        </div>
+
+        <!-- Row 5: Referral code (Optional) -->
+        <div class="registration__form-group flex flex-column" style="gap: var(--space-4);">
+          <label for="reg-referral" class="text-xs text-muted" style="font-weight: 600;">Referral Code <span class="text-muted" style="font-weight: normal;">(Optional)</span></label>
+          <input type="text" id="reg-referral" class="form-input registration__input" placeholder="e.g. JVX-1000">
+        </div>
+
+        <!-- Checkboxes consents -->
+        <div class="flex flex-column" style="gap: var(--space-8); margin: var(--space-4) 0;">
+          <label class="flex align-center text-xs" style="gap: var(--space-8); cursor: pointer;">
+            <input type="checkbox" id="reg-terms" required style="cursor: pointer;">
+            <span>I agree to the <a href="#terms" style="color: var(--color-secondary);">Terms of Service</a> & <a href="#privacy" style="color: var(--color-secondary);">Privacy Policy</a></span>
+          </label>
+          <span class="registration__error text-xs" id="err-terms" style="color: var(--color-error); display: none;" aria-live="polite"></span>
+
+          <label class="flex align-center text-xs" style="gap: var(--space-8); cursor: pointer;">
+            <input type="checkbox" id="reg-consent">
+            <span class="text-muted">I consent to receive launch notifications and challenge campaigns.</span>
+          </label>
+        </div>
+
+        <!-- Form Submit button -->
+        <button type="submit" class="btn btn-secondary w-full" style="padding: var(--space-12); font-size: 0.95rem;">Create Free Account</button>
+        
+        <!-- Form submission success banner placeholder -->
+        <div class="registration__success card" id="reg-success-banner" style="display: none; background-color: var(--color-primary-glow); border-color: var(--color-secondary); margin-top: var(--space-12);">
+          <h4 class="text-gradient" style="font-weight: bold; margin: 0; font-size: 0.9rem;">✓ Registration Pending Email Verification</h4>
+          <p class="text-muted text-xs" style="margin: 0; margin-top: var(--space-4);">A secure activation link has been sent to your email. Check inbox/spam.</p>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</section>

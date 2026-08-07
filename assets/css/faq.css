@@ -1,0 +1,152 @@
+/* FAQ & Trust Center BEM Styles - JovianeX Landing Page */
+
+.faq {
+  position: relative;
+  z-index: 1;
+}
+
+.faq__container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: flex-start;
+  gap: var(--space-64);
+}
+
+.faq__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-20);
+}
+
+.faq__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  background-color: var(--color-primary-glow);
+  border: 1px solid var(--border-color-glow);
+  padding: var(--space-4) var(--space-12);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+}
+
+.faq__title {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.faq__desc {
+  font-size: var(--fs-body-lg);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 2. ACCORDION ITEM LAYOUTS */
+.faq__accordion {
+  width: 100%;
+}
+
+.faq__accordion-item {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.faq__accordion-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-16) var(--space-20);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: all var(--transition-normal);
+}
+
+.faq__accordion-btn:focus-visible {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.faq__accordion-icon {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  transition: transform var(--transition-normal);
+  font-family: monospace;
+}
+
+.faq__accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal) ease, padding var(--transition-normal) ease;
+  padding: 0 var(--space-20);
+}
+
+.faq__accordion-text {
+  font-size: var(--fs-small);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  padding-bottom: var(--space-16);
+}
+
+/* Active Open Modifier States */
+.faq__accordion-item--active {
+  border-color: var(--color-primary-glow);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.faq__accordion-item--active .faq__accordion-content {
+  max-height: 200px; /* Safe upper limit for transition */
+}
+
+.faq__accordion-item--active .faq__accordion-icon {
+  transform: rotate(45deg);
+  color: var(--color-primary);
+}
+
+/* 3. RIGHT PREVIEW DETAILS CARD */
+.faq__right {
+  width: 100%;
+}
+
+.faq__trust-card {
+  background-color: var(--bg-secondary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .faq__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-48);
+  }
+
+  .faq__left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .faq__search-wrapper {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .faq__right {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}

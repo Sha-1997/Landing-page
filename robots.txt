@@ -1,0 +1,10 @@
+# robots.txt for JovianeX AI Ecosystem Production Release
+User-agent: *
+Allow: /
+
+# Exclude private build directories
+Disallow: /assets/js/private/
+Disallow: /scratch/
+
+# Sitemap location
+Sitemap: https://jovianex.com/sitemap.xml

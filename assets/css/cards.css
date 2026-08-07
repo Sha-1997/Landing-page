@@ -1,0 +1,145 @@
+/* Card Component Styles - JovianeX Landing Page */
+
+/* Base class for cards using premium glassmorphism shadows */
+.card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-color-glow);
+  box-shadow: var(--shadow-md), 0 0 15px rgba(110, 68, 255, 0.1);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* 1. FEATURE CARD */
+.feature-card {
+  align-items: flex-start;
+}
+
+.feature-card-icon {
+  background-color: var(--color-primary-glow);
+  border: 1px solid hsl(var(--color-primary-hue), 80%, 50%, 0.3);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-sm);
+  color: var(--color-secondary);
+}
+
+/* 2. PRICING CARD */
+.pricing-card {
+  align-items: center;
+  text-align: center;
+}
+
+.pricing-card--popular {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-glow-primary);
+}
+
+.pricing-value {
+  font-size: 3rem;
+  font-family: var(--font-family-display);
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.pricing-period {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.pricing-features-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  text-align: left;
+}
+
+.pricing-feature-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.95rem;
+}
+
+.pricing-feature-item::before {
+  content: "✓";
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+/* 3. TIMELINE CARD */
+.timeline-card {
+  flex-direction: row;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.timeline-step {
+  font-size: 2rem;
+  font-family: var(--font-family-display);
+  font-weight: 800;
+  color: var(--color-primary-glow);
+  border: 2px solid var(--border-color);
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* 4. TESTIMONIAL CARD */
+.testimonial-card {
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+  font-style: normal;
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  flex-shrink: 0;
+}

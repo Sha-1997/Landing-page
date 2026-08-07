@@ -1,0 +1,102 @@
+<!-- LP-015: ENTERPRISE MASTER FOOTER -->
+<footer class="footer footer--enterprise" style="border-top: 1px solid var(--border-color); padding: var(--space-xl) 0 var(--space-lg) 0;">
+  <div class="container footer__container flex flex-column" style="gap: var(--space-32);">
+    
+    <!-- 4-Column Navigation Grids -->
+    <div class="grid grid-cols-4 footer__columns" style="gap: var(--space-32);">
+      
+      <!-- Column 1: Brand details & Newsletter -->
+      <div class="footer__brand-col flex flex-column" style="gap: var(--space-16);">
+        <div class="header__logo flex align-center" style="font-weight: 900; font-size: 1.15rem; gap: 8px;">
+          <img src="assets/img/logo.jpg" alt="JovianeX Logo" style="height: 24px; width: auto; border-radius: 4px; object-fit: contain;">
+          <span>JovianeX AI Ecosystem</span>
+        </div>
+        <p class="text-muted text-xs" style="line-height: 1.5; margin: 0;">
+          A unified early access gateway for AI-powered workforce recruitment, smart deliveries, travel schedules, and advanced regional logistics.
+        </p>
+
+        <!-- Configurable Social links -->
+        <div class="footer__socials flex" style="gap: var(--space-12);">
+          <a href="#" class="text-muted text-small hover-text-primary" id="footer-social-x" aria-label="Follow us on X">X</a>
+          <a href="#" class="text-muted text-small hover-text-primary" id="footer-social-linkedin" aria-label="Follow us on LinkedIn">LinkedIn</a>
+          <a href="#" class="text-muted text-small hover-text-primary" id="footer-social-instagram" aria-label="Follow us on Instagram">Instagram</a>
+        </div>
+
+        <!-- Future-ready Newsletter signup form -->
+        <form class="footer__newsletter-form flex flex-column" style="gap: var(--space-8); margin-top: var(--space-4);" id="footer-newsletter">
+          <label class="text-xs text-muted" style="font-weight: 600;">Subscribe to updates</label>
+          <div class="flex" style="gap: var(--space-8);">
+            <input type="email" id="footer-newsletter-email" class="form-input name-challenge__input text-xs" placeholder="name@domain.com" style="background-color: var(--bg-surface); padding: var(--space-8) var(--space-12);" required>
+            <button type="submit" class="btn btn-outline text-xs" style="padding: 0 var(--space-12); min-width: 80px;" id="footer-newsletter-btn">Join</button>
+          </div>
+          <span class="text-xs" id="footer-newsletter-status" style="display: none; font-weight: 600;"></span>
+        </form>
+      </div>
+
+      <!-- Column 2: Platform Links -->
+      <div class="flex flex-column" style="gap: var(--space-12);">
+        <h5 class="text-xs" style="font-weight: bold; text-transform: uppercase; margin: 0; color: var(--text-primary); letter-spacing: 0.05em;">Platforms</h5>
+        <ul class="flex flex-column" style="gap: var(--space-8); list-style: none; padding: 0; margin: 0;">
+          <li><a href="#jobs" class="text-muted text-xs hover-text-primary">AI Jobs MVP</a></li>
+          <li><a href="#roadmap" class="text-muted text-xs hover-text-primary">AI Delivery</a></li>
+          <li><a href="#roadmap" class="text-muted text-xs hover-text-primary">AI Travel</a></li>
+          <li><a href="#roadmap" class="text-muted text-xs hover-text-primary">Logistics Module</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Company Links -->
+      <div class="flex flex-column" style="gap: var(--space-12);">
+        <h5 class="text-xs" style="font-weight: bold; text-transform: uppercase; margin: 0; color: var(--text-primary); letter-spacing: 0.05em;">Company</h5>
+        <ul class="flex flex-column" style="gap: var(--space-8); list-style: none; padding: 0; margin: 0;">
+          <li><a href="#ecosystem" class="text-muted text-xs hover-text-primary">About vision</a></li>
+          <li><a href="#founder" class="text-muted text-xs hover-text-primary">Founder Program</a></li>
+          <li><a href="#roadmap" class="text-muted text-xs hover-text-primary">Product Roadmap</a></li>
+          <li><a href="#faq" class="text-muted text-xs hover-text-primary">Contact support</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Support & Legal Links -->
+      <div class="flex flex-column" style="gap: var(--space-12);">
+        <h5 class="text-xs" style="font-weight: bold; text-transform: uppercase; margin: 0; color: var(--text-primary); letter-spacing: 0.05em;">Legal & Help</h5>
+        <ul class="flex flex-column" style="gap: var(--space-8); list-style: none; padding: 0; margin: 0;">
+          <li><a href="#faq" class="text-muted text-xs hover-text-primary">Help Center</a></li>
+          <li><a href="#faq" class="text-muted text-xs hover-text-primary">Ecosystem FAQs</a></li>
+          <li><a href="#" class="text-muted text-xs hover-text-primary" id="footer-link-privacy">Privacy Policy</a></li>
+          <li><a href="#" class="text-muted text-xs hover-text-primary" id="footer-link-terms">Terms of Service</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom contact panel & dynamic year details -->
+    <div class="flex flex-mobile-column justify-between align-center" style="border-top: 1px solid var(--border-color); padding-top: var(--space-20); gap: var(--space-16);">
+      
+      <div class="flex flex-column text-xs text-muted" style="gap: var(--space-4);" id="footer-contact-block">
+        <span id="footer-contact-address">Loading business information...</span>
+        <span id="footer-contact-hours">Loading working schedules...</span>
+      </div>
+
+      <!-- Selectors placeholder / Copyright -->
+      <div class="flex align-center" style="gap: var(--space-16);">
+        
+        <!-- Language Selector Placeholder -->
+        <select class="form-input name-challenge__input text-xs" style="background-color: var(--bg-surface); padding: var(--space-4) var(--space-8); border-color: rgba(255,255,255,0.06); width: auto;" id="footer-lang-selector" aria-label="Select Language">
+          <option value="en">English (US)</option>
+          <option value="ar">العربية</option>
+          <option value="ml">മലയാളം</option>
+        </select>
+
+        <p class="text-muted text-xs" style="margin: 0;">
+          &copy; <span id="footer-year"></span> JovianeX. All rights reserved.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Floating Back-to-Top Button -->
+  <button type="button" id="back-to-top" class="btn btn-secondary flex align-center justify-center" aria-label="Scroll back to top" style="position: fixed; bottom: var(--space-24); right: var(--space-24); width: 44px; height: 44px; border-radius: var(--radius-full); box-shadow: var(--shadow-glow-secondary); display: none; z-index: 99; padding: 0;">
+    ↑
+  </button>
+</footer>

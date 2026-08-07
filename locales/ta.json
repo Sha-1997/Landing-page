@@ -1,0 +1,504 @@
+{
+  "launch_badge": "✨ ஆகஸ்ட் 2026 இல் தொடங்கப்படுகிறது",
+  "hero_title": "எதிர்காலத்தை இயக்குவது",
+  "hero_highlight": "JovianeX AI Ecosystem உடன்",
+  "hero_description": "ஒரே உறுப்பினர் திட்டம். பல AI இயக்கப்படும் தளங்கள். AI Jobs மூலம் தொடங்கி UAE, இந்தியா, EU மற்றும் உலகளாவிய சந்தைகளில் நிறுவன மென்பொருளின் எதிர்காலத்தை திறக்கவும்.",
+  "btn_founder_access": "Founder Access பெறுங்கள்",
+  "btn_free_registration": "இலவச பதிவு",
+  "login": "உள்நுழை",
+  "founder_offer_title": "சிறப்பு Founder Program சலுகை",
+  "first_1000_members": "முதல் 1000 உறுப்பினர்கள்",
+  "founder_benefits": "Founder நன்மைகள்",
+  "early_access": "முன்னுரிமை அணுகல்",
+  "lifetime_founder_recognition": "வாழ்நாள் Founder அங்கீகாரம்",
+  "launch_countdown": "தொடக்க கவுண்ட்டவுன்",
+  "days": "நாட்கள்",
+  "hours": "மணிநேரம்",
+  "minutes": "நிமிடங்கள்",
+  "seconds": "வினாடிகள்",
+  "secure_payments": "✓ பாதுகாப்பான பணப்பரிவர்த்தனைகள்",
+  "founder_benefits_2": "✓ Founder நன்மைகள்",
+  "ai_jobs_launch": "✓ AI Jobs தொடக்கம்",
+  "uae_based": "✓ UAE அடிப்படையிலானது",
+  "ecosystem_status": "Ecosystem நிலை",
+  "live_preview": "நேரடி முன்னோட்டம்",
+  "registered_members": "பதிவு செய்யப்பட்ட உறுப்பினர்கள்",
+  "target_milestone": "இலக்கு மைல்கல்",
+
+  "ai_jobs": "ஏஐ வேலைகள்",
+  "ai_delivery": "ஏஐ டெலிவரி",
+  "ai_travel": "ஏஐ பயணம்",
+  "logistics": "Logistics",
+
+  "vision_badge": "✨ JovianeX பார்வை",
+  "ecosystem_title": "ஒரே AI Ecosystem.",
+  "ecosystem_title_highlight": "வரம்பற்ற வாய்ப்புகள்.",
+  "ecosystem_description": "JovianeX என்பது ஒரு சாதாரண பயன்பாடு மட்டுமல்ல. இது தொடர்ந்து விரிவடையும் வகையில் உருவாக்கப்பட்ட ஒரு மாறும் Ecosystem ஆகும். ஒரே ஒருங்கிணைந்த உறுப்பினர் திட்டம் முதல் நாளிலிருந்தே தொடங்கப்படும் அனைத்து தளங்களுக்கும் வாழ்நாள் அணுகலை வழங்குகிறது.",
+
+  "unified_identity": "ஒருங்கிணைந்த அடையாளம்",
+  "unified_identity_desc": "அனைத்து தொகுதிகளுக்கும் ஒரே அடையாள சான்று.",
+
+  "secure_payments_title": "பாதுகாப்பான பணப்பரிவர்த்தனைகள்",
+  "secure_payments_desc": "பரிவர்த்தனைகளை பாதுகாக்கும் மைய இணக்கப் பதிவு.",
+
+  "continuous_expansion": "தொடர்ச்சியான விரிவாக்கம்",
+  "continuous_expansion_desc": "ஒவ்வொரு காலாண்டிலும் புதிய AI Travel, Delivery மற்றும் Job Router தொகுதிகள் சேர்க்கப்படும்.",
+
+  "explore_founder": "Founder உறுப்பினர் திட்டத்தை ஆராயுங்கள்",
+  "view_roadmap": "மேம்பாட்டு Roadmap பார்க்கவும்",
+
+  "jvx_core": "JVX Core",
+  "available": "கிடைக்கிறது",
+  "ai_jobs_desc": "வேலை பொருத்தும் தளம்.",
+
+  "coming_soon": "விரைவில் வருகிறது",
+  "ai_delivery_desc": "AI அடிப்படையிலான Logistics Router திட்டமிடுபவர்.",
+  "ai_travel_desc": "ஸ்மார்ட் பயண திட்டமிடுபவர்.",
+
+  "logistics_core": "லாஜிஸ்டிக்ஸ் கோர்",
+  "planned": "திட்டமிடப்பட்டது",
+  "logistics_desc": "நிறுவன சரக்கு போக்குவரத்து Router-கள்.",
+
+  "jobs_launch_badge": "✨ ஆகஸ்ட் 2026 இல் தொடங்கப்படுகிறது",
+  "jobs_title": "உங்கள் AI இயக்கப்படும் தொழில்",
+  "jobs_title_highlight": "இங்கே தொடங்குகிறது",
+
+  "jobs_description": "AI Jobs என்பது JovianeX AI Ecosystem-ல் தொடங்கப்படும் முக்கிய தொகுதி ஆகும். ஒரே ஒருங்கிணைந்த உறுப்பினர் திட்டம், வேட்பாளர்கள் மற்றும் நிறுவனங்களுக்கு தானியங்கி பொருத்துதல் தளங்களை வழங்குகிறது.",
+
+  "smart_job_discovery": "ஸ்மார்ட் வேலை தேடல்",
+  "smart_job_discovery_desc": "வேலை தேவைகளுடன் Resume-களை 95% க்கும் அதிகமான துல்லியத்துடன் தானாக பொருத்தவும்.",
+
+  "professional_career_profile": "தொழில்முறை Career Profile",
+  "professional_career_profile_desc": "பாதுகாப்பான ஒருங்கிணைந்த ID கீழ் சரிபார்க்கப்பட்ட Portfolio, திறன் அங்கீகாரம் மற்றும் சான்றுகளை வைத்திருக்கவும்.",
+
+  "employer_workspace": "Employer Workspace",
+  "employer_workspace_desc": "Recruiter Dashboard மூலம் Referral Tracking Pipeline மற்றும் தானியங்கி Screening நிர்வகிக்கப்படுகிறது.",
+
+  "secure_applications": "பாதுகாப்பான விண்ணப்பங்கள்",
+  "secure_applications_desc": "தனிப்பட்ட Profile-களை பாதுகாக்க Compliance அடிப்படையிலான Encryption.",
+
+  "explore_ai_jobs_features": "AI Jobs அம்சங்களை ஆராயுங்கள்",
+
+  "candidate_view": "Candidate View",
+  "employer_view": "Employer View",
+
+  "ai_jobs_dashboard": "JovianeX AI Jobs Dashboard",
+
+  "ai_match_recommendation": "AI Match பரிந்துரை",
+  "calculated_profile_parameters": "Profile அளவுருக்களின் அடிப்படையில் கணக்கிடப்பட்டது",
+  "match_percentage": "98% பொருத்தம்",
+
+  "senior_ai_architect": "Senior AI Architect",
+  "dubai_uae": "துபாய், UAE",
+  "ai_architect_description": "Ecosystem ஒருங்கிணைப்பு மற்றும் Neural Network Scaling Pipeline.",
+
+  "salary_open": "சம்பளம்: திறந்தது",
+  "apply_now": "இப்போது விண்ணப்பிக்கவும்",
+
+  "application_progress": "விண்ணப்ப முன்னேற்றம்",
+  "applied": "விண்ணப்பிக்கப்பட்டது",
+  "screening": "சரிபார்ப்பு",
+  "interview": "நேர்காணல்",
+  "selected": "தேர்ந்தெடுக்கப்பட்டது",
+
+  "recruitment_summary": "ஆட்சேர்ப்பு சுருக்கம்",
+  "active_pipeline_parsing": "செயலில் உள்ள Pipeline பகுப்பாய்வு",
+  "active": "செயலில்",
+
+  "candidate_sarah": "வேட்பாளர்: Sarah Miller",
+  "skill_score": "96% திறன் மதிப்பெண்",
+  "candidate_expertise": "நிபுணத்துவம்: AI Integration, LLM Fine-tuning, Python Core.",
+  "applications_active": "விண்ணப்பங்கள்: 12 செயலில்",
+
+  "open_resume": "Resume திறக்கவும்",
+
+  "total_applicants_processed": "மொத்தமாக செயலாக்கப்பட்ட விண்ணப்பதாரர்கள்",
+  "candidate_count": "84 வேட்பாளர்கள்",
+
+  "founder_membership": "✨ Founder உறுப்பினர் திட்டம்",
+  "become_first_founder": "முதல் உறுப்பினர்களில் ஒருவராகுங்கள்",
+  "founder_members": "Founder உறுப்பினர்கள்",
+  "founder_description": "JovianeX AI Ecosystem விரிவடையும் போது Founder Program ஆரம்ப அணுகல் சலுகைகளை வழங்குகிறது. சிறப்பு தொடக்க விலையில் வாழ்நாள் Multi-platform உறுப்பினர் அணுகலைப் பெறுங்கள்.",
+
+  "early_access_desc": "தொடக்க நாளிலிருந்து AI Jobs தேடல் பொருத்துதல் மற்றும் Employer Workspace தரவுத்தளங்களை அணுகுங்கள்.",
+
+  "founder_recognition": "Founder அங்கீகாரம்",
+  "founder_recognition_desc": "செயலில் உள்ள Candidate மற்றும் Recruiter Profile-களில் நிரந்தர Founder Badge நிலை காண்பிக்கப்படும்.",
+
+  "priority_feature_access": "முன்னுரிமை Feature அணுகல்",
+  "priority_feature_access_desc": "எதிர்கால AI Travel Planner மற்றும் Logistics தொகுதிகளுக்கான Beta Testing முன்னுரிமையைப் பெறுங்கள்.",
+
+  "multi_module_access": "பல தொகுதி அணுகல்",
+  "multi_module_access_desc": "ஒரே உறுப்பினர் கட்டணத்தில் அனைத்து எதிர்கால Platform விரிவாக்கங்களையும் திறக்கவும்.",
+
+  "secure_founder_access": "பாதுகாப்பான Founder Access",
+  "create_free_account": "இலவச கணக்கு உருவாக்கவும்",
+
+  "founder_badge": "FOUNDER",
+
+  "status_code": "நிலை குறியீடு",
+  "launch_date": "தொடக்க தேதி",
+
+  "exclusive_founder_seats": "சிறப்பு ஆரம்ப Founder இடங்கள்",
+  "claimed": "பெறப்பட்டது",
+
+  "seat_limit_note": "* 1000 இடங்கள் நிரம்பியவுடன் ஆரம்ப பிரச்சார விலைகள் முடிவடையும்.",
+
+  "campaign_closes": "பிரச்சாரம் முடிவடையும் நேரம்",
+
+  "pricing": {
+    "badge": "✨ Founder விலை திட்டம்",
+    "title": "முன்கூட்டியே இணைந்து உறுப்பினர் திட்டத்தை உறுதிசெய்யுங்கள்.",
+    "description": "Founder விலை திட்டம் தொடக்க காலத்தில் மட்டும் கிடைக்கும். பின்னர் உறுப்பினர் நிலைகள் கீழே உள்ள வெளியிடப்பட்ட கால அட்டவணையைப் பின்பற்றும்.",
+
+    "founder_launch": "Founder Launch",
+    "founder_desc": "முதல் 1,000 உறுப்பினர்கள் • 3 ஆண்டு உறுப்பினர் திட்டம்",
+
+    "early_growth": "ஆரம்ப வளர்ச்சி",
+    "early_growth_desc": "அடுத்த 4,000 உறுப்பினர்கள் • 3 ஆண்டு உறுப்பினர் திட்டம்",
+
+    "growth_stage": "வளர்ச்சி நிலை",
+    "growth_desc": "அடுத்த 5,000 உறுப்பினர்கள் • 3 ஆண்டு உறுப்பினர் திட்டம்",
+
+    "expansion_phase": "விரிவாக்க நிலை",
+    "expansion_desc": "ஜனவரி 31, 2027 வரை • 3 ஆண்டு உறுப்பினர் திட்டம்",
+
+    "standard_phase": "நிலையான நிலை",
+    "standard_phase_desc": "பிப்ரவரி முதல் ஜூன் 2027 வரை • 2 ஆண்டு உறுப்பினர் திட்டம்",
+
+    "standard_membership": "நிலையான உறுப்பினர் திட்டம்",
+    "standard_membership_desc": "ஜனவரி 1, 2028 முதல் • 1 ஆண்டு உறுப்பினர் திட்டம்"
+  },
+
+  "common": {
+    "active": "செயலில்"
+  },
+
+  "founder_launch_plan": "Founder Launch திட்டம்",
+  "claim_launch_rates": "தொடக்க விலைகளை இப்போது பெறுங்கள்",
+
+  "per_year": "ஒரு வருடத்திற்கு",
+
+  "membership_duration": "உறுப்பினர் காலம்",
+  "three_year_membership": "3 ஆண்டு உறுப்பினர் திட்டம்",
+
+  "annual_rate_locked": "ஆண்டு விலை நிர்ணயம்",
+  "locked_three_years": "ஆம், 3 ஆண்டுகளுக்கு",
+
+  "ecosystem_access": "Ecosystem தொகுதி அணுகல்",
+  "all_current_future_modules": "தற்போதைய மற்றும் எதிர்கால அனைத்து தொகுதிகளும்",
+
+  "founder_badge_rec": "Founder அங்கீகார Badge",
+  "included": "சேர்க்கப்பட்டுள்ளது",
+
+  "calculate_founder_savings": "📊 உங்கள் Founder சேமிப்பை கணக்கிடுங்கள்",
+
+  "compare_pricing_schedule": "தற்போதைய ஆரம்ப விலைகளை எதிர்கால Platform கால அட்டவணையுடன் ஒப்பிடுங்கள்.",
+
+  "compare_against_phase": "இந்த நிலைக்கு எதிராக ஒப்பிடவும்:",
+
+  "early_growth_option": "ஆரம்ப வளர்ச்சி (99 AED/ஆண்டு, 3 ஆண்டு)",
+  "growth_option": "வளர்ச்சி நிலை (199 AED/ஆண்டு, 3 ஆண்டு)",
+  "expansion_option": "விரிவாக்க நிலை (249 AED/ஆண்டு, 3 ஆண்டு)",
+  "standard_phase_option": "நிலையான நிலை (299 AED/ஆண்டு, 2 ஆண்டு)",
+  "standard_membership_option": "நிலையான உறுப்பினர் (499 AED/ஆண்டு, 1 ஆண்டு)",
+
+  "annual_savings": "ஆண்டு சேமிப்பு:",
+  "extra_membership_duration": "கூடுதல் உறுப்பினர் காலம்:",
+  "extra_years": "கூடுதல் ஆண்டுகள்",
+
+  "savings_policy_note": "* சேமிப்பு தற்போதைய வணிக விலை கொள்கையின் அடிப்படையில் திட்டங்களுடன் ஒப்பிட்டு கணக்கிடப்படுகிறது.",
+
+  "become_founder_member": "Founder உறுப்பினராகுங்கள்",
+
+  "free_registration": "✨ இலவச பதிவு",
+
+  "create_account_title": "சில நிமிடங்களில் உங்கள் JovianeX கணக்கை உருவாக்குங்கள்",
+
+  "registration_description": "வளர்ந்து வரும் AI Ecosystem-ஐ ஆராயுங்கள், வரவிருக்கும் Name Challenge பிரச்சாரங்களில் பங்கேற்கவும் மற்றும் ஒரே ஒருங்கிணைந்த Portal மூலம் உங்கள் தொகுதிகளை நிர்வகிக்கவும்.",
+
+  "onboarding_journey": "உங்கள் Onboarding பயணம்",
+
+  "verify_email_mobile": "Email மற்றும் Mobile சான்றுகளை சரிபார்க்கவும்",
+
+  "complete_ai_profile": "உங்கள் AI Jobs Profile-ஐ முடிக்கவும்",
+
+  "upgrade_founder_optional": "Founder உறுப்பினர் திட்டத்திற்கு மேம்படுத்தவும் (விருப்பம்)",
+
+  "secure_account": "🛡️ பாதுகாப்பான கணக்கு",
+  "encrypted_data": "🔑 குறியாக்கப்பட்ட தரவு",
+  "unified_identity_id": "🪪 ஒருங்கிணைந்த அடையாள ID",
+
+  "full_name": "முழு பெயர்",
+  "email_address": "Email முகவரி",
+
+  "country": "நாடு",
+  "select_country": "நாட்டை தேர்ந்தெடுக்கவும்",
+
+  "mobile_number": "Mobile Number",
+
+  "password": "கடவுச்சொல்",
+  "confirm_password": "கடவுச்சொல்லை உறுதிப்படுத்தவும்",
+
+  "password_strength": "கடவுச்சொல் வலிமை:",
+
+  "referral_code": "Referral Code (விருப்பம்)",
+
+  "agree_terms": "நான் ஒப்புக்கொள்கிறேன்",
+  "terms_service": "சேவை விதிமுறைகள்",
+  "privacy_policy": "தனியுரிமைக் கொள்கை",
+
+  "marketing_consent": "தொடக்க அறிவிப்புகள் மற்றும் Challenge பிரச்சாரங்களைப் பெற நான் சம்மதிக்கிறேன்.",
+
+  "verification_pending": "✓ பதிவு Email சரிபார்ப்புக்காக காத்திருக்கிறது",
+
+  "verification_sent": "பாதுகாப்பான Activation Link உங்கள் Email-க்கு அனுப்பப்பட்டுள்ளது. Inbox/Spam சரிபார்க்கவும்.",
+
+  "challenge_badge": "✨ Founder Community Challenge",
+  "challenge_title": "JovianeX Ecosystem-ன் எதிர்காலத்தை உருவாக்க உதவுங்கள்",
+  "challenge_description": "எங்களின் வரவிருக்கும் தொகுதிகளுக்கான படைப்பாற்றல் பெயர்களை சமர்ப்பிக்க ஆரம்பகால பதிவு செய்த Founder உறுப்பினர்களை அழைக்கிறோம். உலகளாவிய AI தீர்வுகளுக்கான பிராண்ட் அடையாளத்தை உருவாக்க உதவுங்கள்.",
+
+  "challenge_originality": "✓ தனித்துவம்",
+  "challenge_brand_fit": "✓ பிராண்ட் பொருத்தம்",
+  "challenge_trademark": "✓ Trademark கிடைக்கும் தன்மை",
+
+  "challenge_open_title": "Challenge தொடக்கம்",
+  "challenge_open_desc": "சரிபார்க்கப்பட்ட கணக்குகளில் இருந்து சமர்ப்பிப்புகள் ஏற்றுக்கொள்ளப்படும்",
+
+  "challenge_deadline_title": "சமர்ப்பிப்பு கடைசி தேதி",
+  "challenge_deadline_desc": "Campaign Form-கள் GST நேரப்படி நள்ளிரவில் பூட்டப்படும்",
+
+  "challenge_winner_title": "வெற்றியாளர் அறிவிப்பு",
+  "challenge_winner_desc": "தேர்ந்தெடுக்கப்பட்ட Branding உலகளவில் இடம்பெறும்",
+
+  "challenge_submission_box": "Challenge Submission Box",
+  "challenge_mockup_preview": "Mockup Preview நிலை",
+  "challenge_locked": "பூட்டப்பட்டது",
+
+  "challenge_name_label": "பரிந்துரைக்கப்பட்ட பெயர்",
+  "challenge_name_placeholder": "உதாரணம்: JovianeX Travel Router",
+
+  "challenge_description_label": "Brand Fit விளக்கம்",
+  "challenge_description_placeholder": "உங்கள் பெயர் JovianeX AI Ecosystem அடையாளத்துடன் எவ்வாறு பொருந்துகிறது என்பதை விளக்கவும்...",
+
+  "challenge_registration_required": "🔒 பதிவு அவசியம்: சமர்ப்பிப்புகளை இயக்க கணக்கு சரிபார்ப்பு தேவை. ஒவ்வொரு பதிவு செய்யப்பட்ட கணக்கிற்கும் ஒரு சமர்ப்பிப்பு மட்டுமே அனுமதிக்கப்படும்.",
+
+  "challenge_submit_unlock": "பரிந்துரையை சமர்ப்பிக்கவும் [பதிவு செய்து திறக்கவும்]",
+
+  "challenge_register": "பங்கேற்க பதிவு செய்யவும்",
+  "challenge_rules": "Challenge விதிகளை பார்க்கவும்",
+
+  "founder_giveaway_badge": "✨ Founder Giveaway",
+
+  "founder_giveaway_title": "Launch-ஐ கொண்டாடுங்கள்<br>Founder Community உடன்",
+
+  "founder_giveaway_desc": "Launch காலத்தில் தங்கள் கணக்குகளை பதிவு செய்யும் தகுதியான ஆரம்ப பங்கேற்பாளர்கள் அதிகாரப்பூர்வ Launch Giveaway கொண்டாட்டங்களில் பங்கேற்கலாம்.",
+
+  "qualification_period": "தகுதி காலம்",
+  "qualification_period_desc": "உங்கள் இலவச கணக்கை பதிவு செய்து தகுதியை சரிபார்க்கவும்",
+
+  "ongoing": "தொடர்கிறது",
+
+  "verification_period": "சரிபார்ப்பு காலம்",
+  "verification_period_desc": "Community விதிகளுடன் இணக்கத்தை ஆய்வு செய்தல்",
+
+  "september_2026": "செப்டம்பர் 2026",
+
+  "public_announcement": "பொது அறிவிப்பு",
+  "public_announcement_desc": "அதிகாரப்பூர்வ பட்டியல் Community Portal மூலம் பகிரப்படும்",
+
+  "october_1_2026": "அக்டோபர் 1, 2026",
+
+  "campaign_rewards": "Campaign வெகுமதிகள்",
+
+  "official_launch_incentives": "அதிகாரப்பூர்வ Launch ஊக்கங்கள்",
+
+  "configured": "அமைக்கப்பட்டது",
+
+  "prize_pool_details": "பரிசுத் தொகுப்பு விவரங்கள்",
+
+  "eligible_winners": "தகுதியான வெற்றியாளர்கள்",
+
+  "audit_verification": "Audit சரிபார்ப்பு",
+
+  "official_audited_draw": "அதிகாரப்பூர்வ Audit செய்யப்பட்ட Draw",
+
+  "campaign_closes_in": "⏰ Campaign முடிவடையும் நேரம்:",
+
+  "mins": "நிமிடங்கள்",
+  "secs": "வினாடிகள்",
+
+  "compliance_details": "இணக்க விவரங்கள்",
+
+  "compliance_text": "வெற்றியாளர்கள் சரிபார்க்கப்படுவார்கள். Campaign விதிகள் பொருந்தும். அதிகாரப்பூர்வ அறிவிப்புகள் சரிபார்க்கப்பட்ட JovianeX தொடர்பு சேனல்கள் மூலம் மட்டுமே வெளியிடப்படும்.",
+
+  "view_giveaway_details": "Giveaway விவரங்களை பார்க்கவும்",
+
+  "register_check_eligibility": "பதிவு செய்து தகுதியை சரிபார்க்கவும்",
+
+  "founder_referral_program": "✨ Founder Referral Program",
+
+  "referral_title": "Founder Community-ஐ<br>ஒன்றாக வளர்ப்போம்",
+
+  "referral_desc": "உங்கள் தனிப்பட்ட Referral Code மூலம் நண்பர்களை அழைக்கவும். Community உருவாக்க உதவுங்கள் மற்றும் Launch நாளில் சிறப்பு Ambassador அங்கீகாரத்தைப் பெறுங்கள்.",
+
+  "share_referral_link": "உங்கள் Referral Link-ஐ பகிரவும்",
+
+  "friend_registers_account": "நண்பர் கணக்கை பதிவு செய்கிறார்",
+
+  "onboarding_requirements": "Onboarding தகுதி தேவைகள் முடிக்கப்பட்டன",
+
+  "referral_confirmed": "Referral உறுதிசெய்யப்பட்டது மற்றும் Ambassador Milestone கண்காணிக்கப்படுகிறது",
+
+  "start_referring": "Referral தொடங்கவும்",
+
+  "learn_how_it_works": "இது எப்படி செயல்படுகிறது என்பதை அறியவும்",
+
+  "ambassador_sharing_center": "Ambassador Sharing Center",
+
+  "unique_invitation_code": "தனிப்பட்ட அழைப்பு Code மாறிகள்",
+
+  "your_referral_code": "உங்கள் Referral Code",
+
+  "copy_code": "Code நகலெடுக்கவும்",
+
+  "unique_sharing_link": "தனிப்பட்ட Sharing Link",
+
+  "copy_link": "Link நகலெடுக்கவும்",
+
+  "total_invites": "மொத்த அழைப்புகள்",
+
+  "qualified_invites": "தகுதியான அழைப்புகள்",
+
+  "progress_to_next_status": "அடுத்த நிலைக்கான முன்னேற்றம்:",
+
+  "campaign_details": "Campaign விவரங்கள்",
+
+  "campaign_details_text": "Ambassador நிலைகள் மற்றும் தகுதிகள் Dashboard அளவுருக்களின் அடிப்படையில் சரிபார்க்கப்பட்ட Referral Campaign கொள்கைகளின்படி அமைக்கப்படுகின்றன.",
+
+  "roadmap_badge": "Product Roadmap",
+
+  "roadmap_title_line1": "ஒரே உறுப்பினர் திட்டம்.",
+  "roadmap_title_line2": "வளர்ந்து வரும் AI Ecosystem.",
+
+  "roadmap_description": "JovianeX பல கட்டங்களாக விரிவடைகிறது. இந்த Roadmap தற்போதைய மேம்பாட்டு திட்டங்களை பிரதிபலிக்கிறது. இது Product முன்னுரிமைகள் மற்றும் Community கருத்துக்களின் அடிப்படையில் தொடர்ந்து மாறும்.",
+
+  "roadmap_growth_title": "Ecosystem வளர்ச்சி பார்வை",
+
+  "roadmap_growth_verified_account": "ஒரு சரிபார்க்கப்பட்ட கணக்கு",
+  "roadmap_growth_membership": "ஒரே உறுப்பினர் அணுகல்",
+  "roadmap_growth_platforms": "கட்டங்களாக AI தளங்கள்",
+
+  "roadmap_btn_founder": "Founder உறுப்பினராகுங்கள்",
+  "roadmap_btn_membership": "உறுப்பினர் திட்டங்களை பார்க்கவும்",
+
+  "roadmap_phase1_label": "கட்டம் 1",
+  "roadmap_phase1_title": "AI Jobs",
+  "roadmap_phase1_status": "தொடங்கப்படுகிறது",
+
+  "roadmap_phase1_description": "ஆகஸ்ட் 2026 இல் தொடங்கப்படுகிறது. இது JovianeX AI Ecosystem-ன் முதல் தொகுதி ஆகும். சரிபார்க்கப்பட்ட உள்ளூர் திறமைகளை தானியங்கி நிறுவன ஆட்சேர்ப்பு Pipeline-களுடன் இணைக்கும் ஒருங்கிணைந்த Candidate மதிப்பீட்டு Portal.",
+
+  "roadmap_phase2_label": "கட்டம் 2",
+  "roadmap_phase2_title": "AI Delivery",
+  "roadmap_phase2_status": "திட்டமிடப்பட்டது",
+
+  "roadmap_phase2_description": "Logistics செயல்திறன் மற்றும் Automation-ஐ மேம்படுத்த உருவாக்கப்பட்ட AI இயக்கப்படும் Delivery Optimization Platform.",
+
+  "roadmap_phase3_label": "கட்டம் 3",
+  "roadmap_phase3_title": "AI Travel",
+  "roadmap_phase3_status": "திட்டமிடப்பட்டது",
+
+  "roadmap_phase3_description": "தனிப்பட்ட பயண திட்டமிடல், பரிந்துரைகள் மற்றும் பயண உதவிகளை வழங்கும் புத்திசாலித்தனமான AI Travel தீர்வுகள்.",
+
+  "roadmap_phase4_label": "கட்டம் 4",
+  "roadmap_phase4_title": "AI Logistics",
+  "roadmap_phase4_status": "திட்டமிடப்பட்டது",
+
+  "roadmap_phase4_description": "Smart Routing, Automation மற்றும் Enterprise Supply Chain தீர்வுகளில் கவனம் செலுத்தும் AI இயக்கப்படும் Logistics Ecosystem.",
+
+  "roadmap_future_label": "எதிர்கால பார்வை",
+
+  "roadmap_future_title": "கூடுதல் AI தொகுதிகள்",
+
+  "roadmap_future_status": "எதிர்கால பார்வை",
+
+  "roadmap_future_description": "JovianeX Ecosystem-ஐ விரிவுபடுத்தும் எதிர்கால AI இயக்கப்படும் தொகுதிகள்.",
+
+  "roadmap_preview_subtitle": "Ecosystem Module விவரங்கள்",
+
+  "faq_badge": "✨ உதவி மையம்",
+
+  "faq_title_line1": "அடிக்கடி கேட்கப்படும்",
+  "faq_title_line2": "கேள்விகள்",
+
+  "faq_description": "JovianeX Ecosystem Launch திட்டங்கள் அல்லது Founder விருப்பங்கள் குறித்து கேள்விகள் உள்ளதா? கீழே உடனடி பதில்களை கண்டறியவும்.",
+
+  "faq_search_placeholder": "🔍 கேள்விகளை தேடவும் (உதா: Founder, Payment)...",
+
+  "faq_loading": "உதவி வளங்கள் ஏற்றப்படுகின்றன...",
+
+  "faq_trust_title": "🛡️ நம்பிக்கை மற்றும் பாதுகாப்பு மையம்",
+
+  "faq_security_payment_title": "பாதுகாப்பான பணப்பரிவர்த்தனைகள்",
+
+  "faq_security_payment_desc": "SSL பரிவர்த்தனைகள் சான்றளிக்கப்பட்ட உள்ளூர் Payment Gateway மூலம் சரிபார்க்கப்படுகின்றன.",
+
+  "faq_security_data_title": "குறியாக்கப்பட்ட தரவு",
+
+  "faq_security_data_desc": "Profile விவரங்களை பாதுகாப்பாக சேமிக்கும் AES-256 தரவுத்தளங்கள்.",
+
+  "faq_security_identity_title": "Unified Identity ID",
+
+  "faq_security_identity_desc": "ஒரே Login Key அனைத்து Ecosystem தொகுதிகளையும் திறக்கிறது.",
+
+  "faq_cta_title_line1": "நீங்கள் தயாரா",
+  "faq_cta_title_line2": "AI எதிர்காலத்தில் இணைய?",
+
+  "faq_cta_description": "உங்கள் Founder Launch விலையை உறுதிசெய்யவும் அல்லது Campaign-களில் பங்கேற்க இலவச Credential Account உருவாக்கவும்.",
+
+  "faq_btn_founder": "Founder உறுப்பினராகுங்கள்",
+
+  "faq_btn_account": "இலவச கணக்கு உருவாக்கவும்",
+
+  "footer_brand": "JovianeX AI Ecosystem",
+  "footer_description": "AI அடிப்படையிலான பணியாளர் ஆட்சேர்ப்பு, ஸ்மார்ட் டெலிவரி, பயண திட்டமிடல் மற்றும் மேம்பட்ட பிராந்திய லாஜிஸ்டிக்ஸிற்கான ஒருங்கிணைந்த ஆரம்ப அணுகல் தளம்.",
+
+  "footer_subscribe": "புதுப்பிப்புகளுக்கு குழுசேரவும்",
+  "footer_email_placeholder": "name@domain.com",
+  "footer_join": "சேரவும்",
+
+  "footer_platforms": "தளங்கள்",
+  "footer_ai_jobs": "ஏஐ வேலைகள் MVP",
+  "footer_ai_delivery": "ஏஐ டெலிவரி",
+  "footer_ai_travel": "ஏஐ பயணம்",
+  "footer_logistics": "லாஜிஸ்டிக்ஸ் தொகுதி",
+
+  "footer_company": "நிறுவனம்",
+  "footer_about": "பார்வை பற்றி",
+  "footer_founder_program": "Founder Program",
+  "footer_product_roadmap": "தயாரிப்பு சாலை வரைபடம்",
+  "footer_contact_support": "தொடர்பு உதவி",
+
+  "footer_legal_help": "சட்டம் மற்றும் உதவி",
+  "footer_help_center": "உதவி மையம்",
+  "footer_ecosystem_faq": "Ecosystem FAQs",
+  "footer_privacy": "தனியுரிமைக் கொள்கை",
+  "footer_terms": "சேவை விதிமுறைகள்",
+
+  "footer_loading_business": "வணிக தகவல்கள் ஏற்றப்படுகின்றன...",
+  "footer_loading_schedule": "பணி நேர அட்டவணை ஏற்றப்படுகிறது...",
+  "footer_rights": "JovianeX. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
+  "nav_home": "முகப்பு",
+"nav_ai_jobs": "ஏஐ வேலைகள்",
+  "nav_roadmap": "சாலை வரைபடம்",
+  "nav_founder": "நிறுவனர்",
+  "nav_pricing": "விலை நிர்ணயம்",
+  "nav_faq": "அடிக்கடி கேட்கப்படும் கேள்விகள்",
+  "nav_contact": "தொடர்பு கொள்ள",
+  
+  "footer_contact": "தொடர்பு கொள்ள",
+  "footer_email": "info@jovianex.com",
+  "footer_phone": "+971 50 306 2031",
+  "footer_address": "அஜ்மான் ஃப்ரீ சோன்\nஐக்கிய அரபு எமிரேட்ஸ்"
+
+}

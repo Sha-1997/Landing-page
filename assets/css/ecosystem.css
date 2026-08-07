@@ -1,0 +1,303 @@
+/* Ecosystem BEM Styles - JovianeX Landing Page */
+
+.ecosystem {
+  position: relative;
+  z-index: 1;
+}
+
+.ecosystem__container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: var(--space-64);
+}
+
+.ecosystem__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-20);
+}
+
+.ecosystem__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  background-color: var(--color-primary-glow);
+  border: 1px solid var(--border-color-glow);
+  padding: var(--space-4) var(--space-12);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  color: var(--color-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.ecosystem__title {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.ecosystem__desc {
+  font-size: var(--fs-body-lg);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Feature grid items styling */
+.ecosystem__features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  width: 100%;
+}
+
+.ecosystem__feature-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  padding: var(--space-16);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.ecosystem__feature-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* 2. RIGHT COLUMN VISUAL HUB */
+.ecosystem__visual-wrapper {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Central Hub Core Anchor */
+.ecosystem__core-hub {
+  position: relative;
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--color-primary);
+  width: 90px;
+  height: 90px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-glow-primary);
+  z-index: 10;
+}
+
+.ecosystem__core-text {
+  font-size: var(--fs-small);
+  font-family: var(--font-family-display);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+}
+
+.ecosystem__core-ripple {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 90px;
+  height: 90px;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-full);
+  animation: coreRipple 3s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes coreRipple {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* SVG dynamic connections overlays */
+.ecosystem__connections {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.ecosystem__connection-path {
+  fill: none;
+  stroke: var(--border-color);
+  stroke-width: 2;
+  stroke-dasharray: 6 4;
+  transition: stroke var(--transition-normal), stroke-width var(--transition-normal);
+}
+
+/* Connection line drawing animations active states */
+.ecosystem__connection-path--active {
+  stroke: var(--color-secondary);
+  stroke-width: 2.5;
+  animation: drawLine 1.5s linear infinite;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+/* Floating Module Cards */
+.ecosystem__module-cards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.ecosystem__module-card {
+  position: absolute;
+  width: 170px;
+  padding: var(--space-12) var(--space-16);
+  pointer-events: auto;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+}
+
+/* Specific offsets for the 4 module cards */
+.ecosystem__module-card--jobs {
+  top: 15px;
+  left: 10px;
+  animation: floatCardJobs 6s ease-in-out infinite;
+}
+
+.ecosystem__module-card--delivery {
+  top: 15px;
+  right: 10px;
+  animation: floatCardDelivery 6s ease-in-out infinite;
+}
+
+.ecosystem__module-card--travel {
+  bottom: 15px;
+  left: 10px;
+  animation: floatCardTravel 6s ease-in-out infinite;
+}
+
+.ecosystem__module-card--logistics {
+  bottom: 15px;
+  right: 10px;
+  animation: floatCardLogistics 6s ease-in-out infinite;
+}
+
+/* Float timings offsets */
+@keyframes floatCardJobs {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes floatCardDelivery {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes floatCardTravel {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes floatCardLogistics {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+/* Modifiers based on statuses */
+.ecosystem__module-card--available {
+  border-color: var(--color-success);
+}
+
+.ecosystem__module-card--available:hover {
+  transform: translateY(-4px) scale(1.03) !important;
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.15);
+}
+
+.ecosystem__module-card--soon {
+  border-color: var(--color-warning);
+}
+
+.ecosystem__module-card--soon:hover {
+  transform: translateY(-4px) scale(1.03) !important;
+  box-shadow: 0 8px 24px rgba(234, 179, 8, 0.15);
+}
+
+.ecosystem__module-card--planned {
+  opacity: 0.6;
+}
+
+.ecosystem__module-card--active {
+  transform: scale(1.05) !important;
+  border-color: var(--color-secondary) !important;
+  box-shadow: var(--shadow-glow-secondary) !important;
+}
+
+/* Tablet & Mobile responsive adaptations */
+@media (max-width: 1024px) {
+  .ecosystem__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-48);
+    text-align: center;
+  }
+
+  .ecosystem__content {
+    align-items: center;
+  }
+  
+  .ecosystem__visual-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .ecosystem__visual-wrapper {
+    height: 380px;
+  }
+
+  .ecosystem__module-card {
+    width: 140px;
+    padding: var(--space-8) var(--space-12);
+  }
+
+  .ecosystem__module-card--jobs {
+    top: 5px;
+    left: 5px;
+  }
+
+  .ecosystem__module-card--delivery {
+    top: 5px;
+    right: 5px;
+  }
+
+  .ecosystem__module-card--travel {
+    bottom: 5px;
+    left: 5px;
+  }
+
+  .ecosystem__module-card--logistics {
+    bottom: 5px;
+    right: 5px;
+  }
+}

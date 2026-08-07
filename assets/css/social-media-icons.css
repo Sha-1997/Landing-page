@@ -1,0 +1,53 @@
+.social-links {
+    display:flex;
+    gap:14px;
+}
+
+
+.social-icon {
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#1f2937;
+
+    font-size:18px;
+
+    text-decoration:none;
+
+    transition:0.3s ease;
+}
+
+
+/* Default icon colors */
+
+.facebook {
+    color:#1877f2;
+}
+
+.instagram {
+    color:#e4405f;
+}
+
+.linkedin {
+    color:#0a66c2;
+}
+
+.youtube {
+    color:#ff0000;
+}
+
+.whatsapp {
+    color:#25d366;
+}
+
+
+.social-icon:hover {
+    transform:translateY(-3px);
+}

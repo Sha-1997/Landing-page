@@ -1,0 +1,141 @@
+/* Free Registration BEM Styles - JovianeX Landing Page */
+
+.registration {
+  position: relative;
+  z-index: 1;
+}
+
+.registration__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-64);
+}
+
+.registration__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-20);
+}
+
+.registration__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  background-color: var(--color-primary-glow);
+  border: 1px solid var(--border-color-glow);
+  padding: var(--space-4) var(--space-12);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+}
+
+.registration__title {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.registration__desc {
+  font-size: var(--fs-body-lg);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 2. ONBOARDING JOURNEY LIST STYLING */
+.registration__journey-step {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  font-family: var(--font-family-display);
+  flex-shrink: 0;
+  transition: all var(--transition-normal);
+}
+
+.registration__journey-item--active .registration__journey-step {
+  border-color: var(--color-secondary);
+  background-color: var(--color-secondary-glow);
+  color: var(--color-secondary);
+  box-shadow: var(--shadow-glow-secondary);
+}
+
+/* 3. INPUT FORM ELEMENT OUTLINES */
+.registration__form-wrapper {
+  width: 100%;
+  background-color: var(--bg-secondary);
+}
+
+.registration__input {
+  width: 100%;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--space-12) var(--space-16);
+  font-size: var(--fs-body);
+  color: var(--text-primary);
+  outline: none;
+  transition: all var(--transition-normal);
+}
+
+.registration__input:focus {
+  border-color: var(--color-secondary);
+  box-shadow: var(--shadow-glow-secondary);
+}
+
+.registration__input--error {
+  border-color: var(--color-error) !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+.registration__select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: var(--space-32) !important;
+}
+
+/* Tablet & Mobile responsive adaptations */
+@media (max-width: 1024px) {
+  .registration__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-48);
+  }
+
+  .registration__info {
+    align-items: center;
+    text-align: center;
+  }
+
+  .registration__journey {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: flex-start;
+  }
+  
+  .registration__form-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .registration__container .grid-cols-2 {
+    grid-template-columns: 1fr;
+    gap: var(--space-16) !important;
+  }
+}

@@ -1,0 +1,91 @@
+/* Referral Program BEM Styles - JovianeX Landing Page */
+
+.referral {
+  position: relative;
+  z-index: 1;
+}
+
+.referral__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-64);
+}
+
+.referral__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-20);
+}
+
+.referral__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  background-color: var(--color-primary-glow);
+  border: 1px solid var(--border-color-glow);
+  padding: var(--space-4) var(--space-12);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+}
+
+.referral__title {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.referral__desc {
+  font-size: var(--fs-body-lg);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 2. ONBOARDING JOURNEY LIST STYLING */
+.referral__journey {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+/* 3. INPUT SHARING ACTIONS */
+.referral__dashboard {
+  background-color: var(--bg-secondary);
+}
+
+.referral__input--copied {
+  border-color: var(--color-success) !important;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1) !important;
+}
+
+/* Tablet & Mobile responsive adaptations */
+@media (max-width: 1024px) {
+  .referral__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-48);
+  }
+
+  .referral__left {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .referral__journey {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: flex-start;
+  }
+  
+  .referral__right {
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}

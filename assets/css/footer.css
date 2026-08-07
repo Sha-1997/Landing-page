@@ -1,0 +1,74 @@
+/* Enterprise Footer BEM Styles - JovianeX Landing Page */
+
+.footer--enterprise {
+  position: relative;
+  z-index: 10;
+  background-color: var(--bg-surface);
+}
+
+.footer__columns {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr 0.9fr 0.9fr;
+  gap: var(--space-48);
+}
+
+.footer__brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+/* Micro-animations and link hovers */
+.hover-text-primary {
+  transition: color var(--transition-normal);
+  text-decoration: none;
+}
+
+.hover-text-primary:hover {
+  color: var(--color-primary) !important;
+}
+
+/* Newsletter Input styles */
+.footer__newsletter-form .name-challenge__input {
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+  border-right: none;
+}
+
+.footer__newsletter-form .btn-outline {
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  border-left: 1px solid var(--border-color);
+}
+
+/* Back to Top floating structures */
+#back-to-top {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color var(--transition-normal);
+}
+
+#back-to-top.back-to-top--visible {
+  display: flex !important;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Tablet & Mobile responsive adaptions */
+@media (max-width: 1024px) {
+  .footer__columns {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-32);
+  }
+}
+
+@media (max-width: 640px) {
+  .footer__columns {
+    grid-template-columns: 1fr;
+    gap: var(--space-24);
+  }
+
+  .footer__container > div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

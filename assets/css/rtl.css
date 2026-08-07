@@ -1,0 +1,38 @@
+
+
+/* Arabic RTL Support */
+
+html[dir="rtl"] {
+
+    direction: rtl;
+
+}
+
+
+html[dir="rtl"] body {
+
+    text-align: right;
+
+}
+
+
+html[dir="rtl"] .navbar,
+html[dir="rtl"] nav {
+
+    direction: rtl;
+
+}
+
+
+html[dir="rtl"] .text-start {
+
+    text-align: right !important;
+
+}
+
+
+html[dir="rtl"] .text-end {
+
+    text-align: left !important;
+
+}

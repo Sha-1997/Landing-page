@@ -1,0 +1,115 @@
+<!-- LP-010: AI ECOSYSTEM NAMING CHALLENGE SECTION -->
+<section id="challenge" class="section name-challenge reveal">
+  <div class="container name-challenge__container">
+    
+    <!-- Left Column: Vision Details & Campaign Timeline -->
+    <div class="name-challenge__left">
+      <div class="launch-badge name-challenge__badge">✨ Founder Community Challenge</div>
+      
+      <h2 class="text-h2 name-challenge__title">Help Shape the Future of<br>the JovianeX Ecosystem</h2>
+      
+      <p class="text-lead name-challenge__desc">
+        We invite early registered founders to submit creative names for our upcoming modules. Help define our global AI solutions branding identity.
+      </p>
+
+      <!-- Campaign Evaluation Criteria tags -->
+      <div class="flex" style="gap: var(--space-8); flex-wrap: wrap; margin: var(--space-4) 0;">
+        <span class="badge" style="background-color: var(--bg-surface); border: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.65rem;">✓ Originality</span>
+        <span class="badge" style="background-color: var(--bg-surface); border: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.65rem;">✓ Brand Fit</span>
+        <span class="badge" style="background-color: var(--bg-surface); border: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.65rem;">✓ Trademark Availability</span>
+      </div>
+
+      <!-- Campaign Milestones Timeline Progress -->
+      <div class="name-challenge__timeline">
+        <div class="name-challenge__timeline-line" aria-hidden="true"></div>
+        
+        <div class="name-challenge__timeline-item name-challenge__timeline-item--active">
+          <div class="name-challenge__timeline-marker"></div>
+          <div class="name-challenge__timeline-content flex justify-between align-center">
+            <div>
+              <h4 class="text-small" style="font-weight: var(--fw-bold); margin: 0;">Challenge Opens</h4>
+              <p class="text-muted text-xs" style="margin: 0; margin-top: var(--space-4);">Submissions accepted from verified accounts</p>
+            </div>
+            <span class="text-small" style="font-weight: 700;">July 15, 2026</span>
+          </div>
+        </div>
+
+        <div class="name-challenge__timeline-item">
+          <div class="name-challenge__timeline-marker"></div>
+          <div class="name-challenge__timeline-content flex justify-between align-center">
+            <div>
+              <h4 class="text-small" style="font-weight: var(--fw-bold); margin: 0;">Submission Deadline</h4>
+              <p class="text-muted text-xs" style="margin: 0; margin-top: var(--space-4);">Campaign forms lock at midnight GST</p>
+            </div>
+            <span class="text-small" style="font-weight: 700;">August 31, 2026</span>
+          </div>
+        </div>
+
+        <div class="name-challenge__timeline-item">
+          <div class="name-challenge__timeline-marker"></div>
+          <div class="name-challenge__timeline-content flex justify-between align-center">
+            <div>
+              <h4 class="text-small" style="font-weight: var(--fw-bold); margin: 0;">Winner Announcement</h4>
+              <p class="text-muted text-xs" style="margin: 0; margin-top: var(--space-4);">Selected branding featured globally</p>
+            </div>
+            <span class="text-small" style="font-weight: 700;">October 1, 2026</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right Column: Interactive Mockup Entry Box -->
+    <div class="name-challenge__right flex flex-column" style="gap: var(--space-20);">
+      
+      <!-- Interactive Entry Card mockup -->
+      <div class="card name-challenge__form-card" style="border-color: rgba(255,255,255,0.06); padding: var(--space-24);">
+        <div class="flex align-center justify-between" style="border-bottom: 1px solid var(--border-color); padding-bottom: var(--space-sm); margin-bottom: var(--space-md);">
+          <div>
+            <h4 class="text-small" style="font-weight: var(--fw-semibold); margin: 0;">Challenge Submission Box</h4>
+            <p class="text-muted text-xs" style="margin: 0;">Mockup Preview state</p>
+          </div>
+          <span class="badge" style="background-color: var(--color-warning-glow); border: 1px solid var(--color-warning); color: var(--color-warning); font-size: 0.65rem;">Locked</span>
+        </div>
+
+        <div class="flex flex-column" style="gap: var(--space-12);">
+          
+          <!-- Field 1: Suggested Name -->
+          <div class="flex flex-column" style="gap: var(--space-4);">
+            <div class="flex justify-between align-center">
+              <label for="challenge-name" class="text-xs text-muted" style="font-weight: 600;">Suggested Name</label>
+              <span class="text-muted text-xs" style="font-size: 0.65rem;"><span data-challenge-name-cnt>0</span> / 30</span>
+            </div>
+            <input type="text" id="challenge-name" class="form-input name-challenge__input" placeholder="e.g. JovianeX Travel Router" maxlength="30" disabled>
+          </div>
+
+          <!-- Field 2: Description -->
+          <div class="flex flex-column" style="gap: var(--space-4);">
+            <div class="flex justify-between align-center">
+              <label for="challenge-desc" class="text-xs text-muted" style="font-weight: 600;">Brand Fit Description</label>
+              <span class="text-muted text-xs" style="font-size: 0.65rem;"><span data-challenge-desc-cnt>0</span> / 150</span>
+            </div>
+            <textarea id="challenge-desc" class="form-input name-challenge__input name-challenge__textarea" placeholder="Explain how your name fits the JovianeX AI Ecosystem identity..." maxlength="150" style="height: 90px; resize: none;" disabled></textarea>
+          </div>
+
+          <!-- Warning text -->
+          <div class="card" style="background-color: rgba(234, 179, 8, 0.03); border-color: rgba(234, 179, 8, 0.1); padding: var(--space-12);">
+            <p class="text-muted text-xs" style="margin: 0; line-height: 1.4;">🔒 <strong>Registration Required:</strong> Account verification is required to enable submissions. One submission allowed per registered account.</p>
+          </div>
+
+          <!-- locked submit button mockup -->
+          <button type="button" class="btn btn-secondary w-full" style="padding: var(--space-12); font-size: 0.95rem; opacity: 0.6; cursor: not-allowed;" disabled>Submit Suggestion [Register to Unlock]</button>
+
+        </div>
+      </div>
+
+      <!-- Action CTAs -->
+      <div class="flex flex-mobile-column name-challenge__actions" style="gap: var(--space-md); width: 100%;">
+        <a href="#access" class="btn btn-secondary">Register to Participate</a>
+        <a href="#faq" class="btn btn-outline">View Challenge Rules</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
