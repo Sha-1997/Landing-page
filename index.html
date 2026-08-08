@@ -175,12 +175,12 @@
         <div class="mobile-actions">
 
 
-          <a href="http://localhost:3000/login" class="btn btn-ghost" data-i18n="login">
+          <a href="/" class="btn btn-ghost" data-i18n="login">
             Login
           </a>
 
 
-          <a href="http://localhost:3000/register" class="btn btn-secondary" data-i18n="free_registration">
+          <a href="/" class="btn btn-secondary" data-i18n="free_registration">
             Free Registration
           </a>
 
@@ -230,12 +230,12 @@
       <div class="nav-actions header__actions">
 
 
-        <a href="http://localhost:3000/login" class="btn btn-ghost header__btn header__btn--login" data-i18n="login">
+        <a href="/" class="btn btn-ghost header__btn header__btn--login" data-i18n="login">
           Login
         </a>
 
 
-        <a href="http://localhost:3000/register" class="btn btn-secondary header__btn header__btn--register"
+        <a href="/" class="btn btn-secondary header__btn header__btn--register"
           data-i18n="free_registration">
           Free Registration
         </a>
@@ -289,9 +289,9 @@
 
         <!-- CTA Buttons -->
         <div class="flex flex-mobile-column hero__ctas" style="gap: var(--space-md); width: 100%;">
-          <a href="http://localhost:3000/register" class="btn btn-primary hero__btn hero__btn--primary "
+          <a href="/" class="btn btn-primary hero__btn hero__btn--primary "
             data-i18n="btn_founder_access">Get Founder Access</a>
-          <a href="http://localhost:3000/register" class="btn btn-outline hero__btn hero__btn--secondary"
+          <a href="/" class="btn btn-outline hero__btn hero__btn--secondary"
             data-i18n="btn_free_registration">Free Registration</a>
         </div>
 
@@ -2903,12 +2903,12 @@
             </p>
 
             <div class="flex flex-column" style="gap: var(--space-12); width: 100%; margin-top: var(--space-8)">
-              <a href="http://localhost:3000/register" class="btn btn-secondary w-full" data-i18n="faq_btn_founder"
+              <a href="/" class="btn btn-secondary w-full" data-i18n="faq_btn_founder"
                 style="padding: var(--space-12)">
                 Become a Founder Member
               </a>
 
-              <a href="http://localhost:3000/register" class="btn btn-outline w-full" data-i18n="faq_btn_account"
+              <a href="/" class="btn btn-outline w-full" data-i18n="faq_btn_account"
                 style="padding: var(--space-12)">
                 Create Free Account
               </a>
@@ -3212,8 +3212,56 @@
       }
 
     }
+document.addEventListener('DOMContentLoaded', () => {
+  // Target: August 11, 2026 at 11:00 PM (23:00)
+  const launchDate = new Date("2026-08-11T23:00:00").getTime();
 
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const timeDifference = launchDate - now;
+
+    if (timeDifference <= 0) {
+      updateElements('00', '00', '00', '00');
+      clearInterval(timerInterval);
+      return;
+    }
+
+    // Time calculations
+    const days = String(Math.floor(timeDifference / (1000 * 60 * 60 * 24))).padStart(2, '0');
+    const hours = String(Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+    const minutes = String(Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+    const seconds = String(Math.floor((timeDifference % (1000 * 60)) / 1000)).padStart(2, '0');
+
+    updateElements(days, hours, minutes, seconds);
+  }
+
+  function updateElements(d, h, m, s) {
+    // 1. First Countdown (data-countdown-*)
+    setElementText('[data-countdown-days]', d);
+    setElementText('[data-countdown-hours]', h);
+    setElementText('[data-countdown-minutes]', m);
+    setElementText('[data-countdown-seconds]', s);
+
+    // 2. Second Countdown / Campaign Closes (data-founder-*)
+    setElementText('[data-founder-days]', d);
+    setElementText('[data-founder-hours]', h);
+    setElementText('[data-founder-minutes]', m);
+    setElementText('[data-founder-seconds]', s);
+  }
+
+  function setElementText(selector, text) {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach(el => {
+      el.textContent = text;
+    });
+  }
+
+  // Initial Call & Interval Setup
+  updateCountdown();
+  const timerInterval = setInterval(updateCountdown, 1000);
+});
   </script>
+  
 </body>
 
 </html>
