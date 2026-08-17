@@ -1,0 +1,7 @@
+services:
+  ecosystem-landing:
+    container_name: ecosystem-landing-app
+    build: .
+    ports:
+      - "8001:8001"
+    restart: always
