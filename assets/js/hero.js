@@ -58,13 +58,18 @@ export class HeroController {
   /**
    * Simulated interactive registered member count milestone loader
    */
-  animateMetrics() {
+ async animateMetrics() {
     const counterEl = document.querySelector('[data-member-counter]');
     if (!counterEl) return;
 
-    let currentVal = 780;
-    const targetVal = 942;
-    const duration = 2000; // 2 seconds duration
+    let currentVal = 0;
+    
+    const apiValue = await getMemberCount(); 
+
+    console.log(apiValue);
+    const targetVal = apiValue;
+
+    const duration = 2000;
     const intervalTime = 30;
     const step = (targetVal - currentVal) / (duration / intervalTime);
 

@@ -22,6 +22,8 @@ export class FounderMembershipController {
     if (this.progressBar) {
       this.initScrollTrigger();
     }
+
+    this.initFounderStats();
   }
 
   /**
@@ -29,15 +31,13 @@ export class FounderMembershipController {
    */
   initScrollTrigger() {
     if (!('IntersectionObserver' in window)) {
-      // Fallback: immediately animate progress
-      this.animateProgress();
       return;
     }
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && !this.animated) {
-          this.animateProgress();
+          this.initFounderStats();
           this.animated = true;
           observer.unobserve(entry.target);
         }
@@ -50,10 +50,9 @@ export class FounderMembershipController {
   /**
    * Animates seats progress bar and numerical counts.
    */
-  animateProgress() {
-    let startVal = 700;
-    const targetVal = 842;
-    const duration = 1500; // 1.5 seconds duration
+  animateProgress(targetVal) {
+    let startVal = Math.max(targetVal - 100, 0);
+    const duration = 1500;
     const intervalTime = 30;
     const step = (targetVal - startVal) / (duration / intervalTime);
 
@@ -70,9 +69,14 @@ export class FounderMembershipController {
 
   /**
    * Updates display coordinates for seats and digital cards.
-   * 
-   * @param {number} val - The numerical count to update.
    */
+  async initFounderStats() {
+    const stats = await getFounderSeatStats();
+    if (stats && typeof stats.claimed === 'number') {
+      this.animateProgress(stats.claimed);
+    }
+  }
+
   updateDisplay(val) {
     if (this.claimedEl) this.claimedEl.textContent = String(val);
     if (this.cardNumEl) this.cardNumEl.textContent = String(val);
@@ -112,7 +116,7 @@ export class FounderMembershipController {
       this.secondsEl.textContent = String(seconds).padStart(2, '0');
     };
 
-    updateTimer(); // Initial check
+    updateTimer();
     this.countdownInterval = setInterval(updateTimer, 1000);
   }
 }

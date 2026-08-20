@@ -11,7 +11,7 @@ export class RegistrationController {
     this.passwordInput = document.getElementById('reg-password');
     this.confirmInput = document.getElementById('reg-confirm');
     this.termsCheckbox = document.getElementById('reg-terms');
-    
+
     this.strengthBar = document.getElementById('reg-strength-bar');
     this.strengthLabel = document.getElementById('reg-strength-label');
     this.successBanner = document.getElementById('reg-success-banner');
@@ -41,9 +41,11 @@ export class RegistrationController {
     // 3. Clear warnings on input focus/type
     const inputs = [this.nameInput, this.emailInput, this.countrySelect, this.mobileInput, this.passwordInput, this.confirmInput, this.termsCheckbox];
     inputs.forEach((input) => {
-      input.addEventListener('input', () => {
-        this.clearError(input);
-      });
+      if (input) {
+        input.addEventListener('input', () => {
+          this.clearError(input);
+        });
+      }
     });
   }
 
@@ -125,11 +127,11 @@ export class RegistrationController {
    */
   clearError(inputEl) {
     inputEl.classList.remove('registration__input--error');
-    
+
     // Auto-resolve error span IDs based on input tags
     const inputId = inputEl.getAttribute('id');
     const errId = `err-${inputId.replace('reg-', '')}`;
-    
+
     const errSpan = document.getElementById(errId);
     if (errSpan) {
       errSpan.style.display = 'none';
@@ -189,7 +191,7 @@ export class RegistrationController {
 
     // Clear inputs values
     this.form.reset();
-    
+
     // Clear strength displays
     this.strengthBar.style.width = '0%';
     this.strengthLabel.textContent = 'None';
