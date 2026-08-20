@@ -2146,30 +2146,30 @@
 
                                 <div>
 
-                                    <h3 class="text-gradient" style="
-                  font-size:var(--fs-h3);
-                  font-weight:var(--fw-bold);
-                  margin:0 0 4px 0;
-                "  id="membership-plan-name">
-                    Founder Launch Plan
-                  </h3>
+                        <h3 id="step4-plan-name" class="text-gradient" style="
+    font-size:var(--fs-h3);
+    font-weight:var(--fw-bold);
+    margin:0 0 4px 0;
+">
+    Founder Launch Plan
+</h3>
 
-                                    <span class="text-muted text-xs" id="membership-plan-duration-label">
-                    3-Year Founder Membership
-                  </span>
+<span id="step4-plan-subtitle" class="text-muted text-xs">
+    3-Year Founder Membership
+</span>
 
                                 </div>
 
 
                                 <div class="text-right">
 
-                                    <span class="block text-gradient" style="
-                  font-size:1.7rem;
-                  font-weight:800;
-                  white-space:nowrap;
-                " id="membership-plan-price">
-                    147 AED
-                  </span>
+                         <span id="step4-plan-price" class="block text-gradient" style="
+    font-size:1.7rem;
+    font-weight:800;
+    white-space:nowrap;
+">
+    147 AED
+</span>
 
                                     <span class="text-muted text-xs" style="font-size:0.6rem;">
                     VAT Inclusive
@@ -2181,80 +2181,78 @@
 
 
                             <!-- =====================================================
-               PLAN DETAILS
-          ====================================================== -->
+          <!-- =====================================================
+     PLAN DETAILS
+====================================================== -->
 
-                            <div class="card" style="
-              background:rgba(255,255,255,0.02);
-              border-color:rgba(255,255,255,0.05);
-              padding:var(--space-12);
-              margin-bottom:var(--space-16);
-            ">
+<div class="card" style="
+    background:rgba(255,255,255,0.02);
+    border-color:rgba(255,255,255,0.05);
+    padding:var(--space-12);
+    margin-bottom:var(--space-16);
+">
 
-                                <div class="flex justify-between text-small" style="
-                margin-bottom:var(--space-8);
-                gap:var(--space-12);
-              ">
+    <div class="flex justify-between text-small" style="
+        margin-bottom:var(--space-8);
+        gap:var(--space-12);
+    ">
+        <span class="text-muted">
+            Membership
+        </span>
 
-                                    <span class="text-muted">
-                    Membership
-                  </span>
-
-                                    <strong id="membership-membership-name">
-                    Founder Membership
-                  </strong>
-
-                                </div>
-
-
-                                <div class="flex justify-between text-small" style="
-                margin-bottom:var(--space-8);
-                gap:var(--space-12);
-              ">
-
-                                    <span class="text-muted">
-                    Duration
-                  </span>
-
-                                    <strong id="membership-duration">
-                    3 Years
-                  </strong>
-
-                                </div>
+        <strong id="step4-membership-name">
+            Founder Membership
+        </strong>
+    </div>
 
 
-                                <div class="flex justify-between text-small" style="
-                margin-bottom:var(--space-8);
-                gap:var(--space-12);
-              ">
+    <div class="flex justify-between text-small" style="
+        margin-bottom:var(--space-8);
+        gap:var(--space-12);
+    ">
+        <span class="text-muted">
+            Duration
+        </span>
 
-                                    <span class="text-muted">
-                    Equivalent Annual Rate
-                  </span>
-
-                                    <strong id="membership-annual-rate">
-                    49 AED / year
-                  </strong>
-
-                                </div>
+        <strong id="step4-membership-duration">
+            3 Years
+        </strong>
+    </div>
 
 
-                                <div class="flex justify-between text-small" style="gap:var(--space-12);">
+    <div class="flex justify-between text-small" style="
+        margin-bottom:var(--space-8);
+        gap:var(--space-12);
+    ">
+        <span class="text-muted">
+            Equivalent Annual Rate
+        </span>
 
-                                    <span class="text-muted">
-                    Total
-                  </span>
+        <strong id="step4-annual-rate">
+            49 AED / year
+        </strong>
+    </div>
 
-                                    <strong style="
-                  color:var(--color-secondary);
-                  font-size:1rem;
-                " id="membership-total">
-                    147 AED
-                  </strong>
 
-                                </div>
+    <div class="flex justify-between text-small" style="
+        gap:var(--space-12);
+    ">
+        <span class="text-muted">
+            Total
+        </span>
 
-                            </div>
+        <strong
+            id="step4-total"
+            style="
+                color:var(--color-secondary);
+                font-size:1rem;
+            "
+        >
+            147 AED
+        </strong>
+    </div>
+
+</div>
 
 
                             <!-- =====================================================
@@ -3838,1317 +3836,253 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/api-integrations.js"></script>
 
-  <script>
-    /* ============================================================
-       MEMBERSHIP PRICING
-       ============================================================ */
-
-    let membershipPlans = [];
-
-
-    /* ============================================================
-       RENDER MEMBERSHIP PLANS
-       ============================================================ */
-
-    async function renderMembershipPlans() {
-
-        const container =
-            document.getElementById("pricing-timeline");
-
-        if (!container) {
-            console.warn(
-                "pricing-timeline container not found"
-            );
-            return;
-        }
-
-        try {
-
-            /* ----------------------------------------------------
-               Fetch plans from existing membership API
-               ---------------------------------------------------- */
-
-            if (
-                typeof getMembershipPlans !==
-                "function"
-            ) {
-                console.error(
-                    "getMembershipPlans() is not available."
-                );
-
-                return;
+    <script>
+        // Shared membership plans
+          let membershipPlans = [];
+        
+          async function renderMembershipPlans() {
+            const container = document.getElementById("pricing-timeline");
+        
+            if (!container) {
+              console.warn("pricing-timeline container not found");
+              return;
             }
-
-            const plans =
-                await getMembershipPlans();
-
-
-            /* ----------------------------------------------------
-               Validate response
-               ---------------------------------------------------- */
-
-            if (
-                !Array.isArray(plans) ||
-                !plans.length
-            ) {
-
+        
+            try {
+              const plans = await getMembershipPlans();
+        
+              if (!plans || !plans.length) {
                 container.innerHTML = `
-                    <p class="text-muted text-small">
-                        Pricing plans are currently unavailable.
-                    </p>
+                  <p class="text-muted text-small">
+                    Pricing plans are currently unavailable.
+                  </p>
                 `;
-
-                console.warn(
-                    "No membership plans returned from API."
-                );
-
+                console.log("Fetched membership plans:", plans);
+console.log(
+  "Rendered timeline:",
+  [...document.querySelectorAll(".pricing__timeline-item")].map(item => ({
+    phase: item.dataset.phase,
+    active: item.classList.contains(
+      "pricing__timeline-item--active"
+    ),
+    name: item.querySelector("h4")?.innerText
+  }))
+);
                 return;
-            }
-
-
-            /* ----------------------------------------------------
-               Store globally
-               ---------------------------------------------------- */
-
-            membershipPlans = plans;
-
-
-            console.log(
-                "Fetched membership plans:",
-                membershipPlans
-            );
-
-
-            /* ----------------------------------------------------
-               Render timeline
-               ---------------------------------------------------- */
-
-            renderPricingTimeline(
-                membershipPlans
-            );
-
-
-            /* ----------------------------------------------------
-               Render comparison dropdown
-               ---------------------------------------------------- */
-
-            renderPricingCalculator(
-                membershipPlans
-            );
-
-
-            /* ----------------------------------------------------
-               Sync payment card
-               ---------------------------------------------------- */
-
-            syncPaymentCard();
-
-
-            /* ----------------------------------------------------
-               Debug
-               ---------------------------------------------------- */
-
-            console.log(
-                "Rendered timeline:",
-                [
-                    ...document.querySelectorAll(
-                        ".pricing__timeline-item"
-                    )
-                ].map(item => ({
-                    phase:
-                        item.dataset.phase,
-
-                    active:
-                        item.classList.contains(
-                            "pricing__timeline-item--active"
-                        ),
-
-                    name:
-                        item.querySelector(
-                            "h4"
-                        )?.innerText
-                }))
-            );
-
-        } catch (error) {
-
-            console.error(
-                "Error rendering membership plans:",
-                error
-            );
-
-            container.innerHTML = `
+              }
+        
+              // Make plans available to the calculator/controller
+              membershipPlans = plans;
+        
+              // Render left timeline
+              renderPricingTimeline(plans);
+        
+              // Render right-side calculator dropdown
+              renderPricingCalculator(plans);
+        
+            } catch (error) {
+              console.error("Error rendering membership plans:", error);
+        
+              container.innerHTML = `
                 <p class="text-muted text-small">
-                    Unable to load pricing plans.
+                  Unable to load pricing plans.
                 </p>
-            `;
-        }
-    }
-
-
-    /* ============================================================
-       RENDER LEFT PRICING TIMELINE
-       ============================================================ */
-
-    function renderPricingTimeline(plans) {
-
-        const container =
-            document.getElementById(
-                "pricing-timeline"
-            );
-
-        if (!container) {
-            return;
-        }
-
-
-        container.innerHTML = `
-
-            <div
+              `;
+            }
+          }
+        
+        
+          function renderPricingTimeline(plans) {
+            const container = document.getElementById("pricing-timeline");
+        
+            if (!container) return;
+        
+            container.innerHTML = `
+              <div
                 class="pricing__timeline-line"
                 aria-hidden="true"
-            ></div>
-
-            ${plans
-                .map((plan, index) => {
-
-                    const phase =
-                        getPlanPhase(plan);
-
-                    const name =
-                        getPlanName(plan);
-
-                    const price =
-                        getPlanPrice(plan);
-
-                    const currency =
-                        getPlanCurrency(plan);
-
-                    const duration =
-                        getPlanDuration(plan);
-
-
-                    /*
-                     * Initial active item.
-                     *
-                     * The actual selected item will be
-                     * synchronized afterwards.
-                     */
-                    const isActive =
-                        index === 0;
-
-
-                    return `
-
-                        <div
-                            class="
-                                pricing__timeline-item
-                                ${
-                                    isActive
-                                        ? "pricing__timeline-item--active"
-                                        : ""
-                                }
-                            "
-                            data-phase="${escapeHtml(
-                                phase
-                            )}"
-                        >
-
-                            <div
-                                class="
-                                    pricing__timeline-marker
-                                "
-                            ></div>
-
-
-                            <div
-                                class="
-                                    pricing__timeline-content
-                                    flex
-                                    justify-between
-                                    align-center
-                                "
-                            >
-
-                                <div>
-
-                                    <h4
-                                        class="text-small"
-                                        style="
-                                            font-weight:
-                                                var(--fw-bold);
-                                            margin:0;
-                                        "
-                                    >
-
-                                        ${escapeHtml(
-                                            name
-                                        )}
-
-                                        ${
-                                            isActive
-                                                ? `
-                                                    <span
-                                                        class="badge"
-                                                        style="
-                                                            background-color:
-                                                                var(--color-secondary-glow);
-                                                            color:
-                                                                var(--color-secondary);
-                                                            font-size:
-                                                                0.6rem;
-                                                            vertical-align:
-                                                                middle;
-                                                            margin-left:
-                                                                var(--space-4);
-                                                        "
-                                                    >
-                                                        Active
-                                                    </span>
-                                                `
-                                                : ""
-                                        }
-
-                                    </h4>
-
-
-                                    <p
-                                        class="
-                                            text-muted
-                                            text-xs
-                                        "
-                                        style="
-                                            margin:0;
-                                            margin-top:
-                                                var(--space-4);
-                                        "
-                                    >
-                                        ${escapeHtml(
-                                            plan.description || ""
-                                        )}
-                                    </p>
-
-                                </div>
-
-
-                                <div
-                                    class="text-right"
-                                >
-
-                                    <span
-                                        class="
-                                            pricing__timeline-price
-                                        "
-                                    >
-                                        ${escapeHtml(
-                                            String(price)
-                                        )}
-                                        ${escapeHtml(
-                                            currency
-                                        )}/yr
-                                    </span>
-
-
-                                    <span
-                                        class="
-                                            block
-                                            text-muted
-                                        "
-                                        style="
-                                            font-size:
-                                                0.6rem;
-                                        "
-                                    >
-                                        VAT Inclusive
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                    `;
-                })
-                .join("")}
-        `;
-    }
-
-
-    /* ============================================================
-       RENDER COMPARISON DROPDOWN
-       ============================================================ */
-
-    function renderPricingCalculator(plans) {
-
-        const select =
-            document.getElementById(
-                "pricing-compare-select"
-            );
-
-        if (!select) {
-
-            console.warn(
-                "pricing-compare-select not found."
-            );
-
-            return;
-        }
-
-
-        /* --------------------------------------------------------
-           Remember currently selected value
-           -------------------------------------------------------- */
-
-        const previousValue =
-            select.value;
-
-
-        /* --------------------------------------------------------
-           Clear old options
-           -------------------------------------------------------- */
-
-        select.innerHTML = "";
-
-
-        /* --------------------------------------------------------
-           Founder should not appear in comparison dropdown
-           -------------------------------------------------------- */
-
-        const comparisonPlans =
-            plans.filter(
-                plan =>
-                    !isFounderPlan(plan)
-            );
-
-
-        /* --------------------------------------------------------
-           Create options
-           -------------------------------------------------------- */
-
-        comparisonPlans.forEach(plan => {
-
-            const phase =
-                getPlanPhase(plan);
-
-            const name =
-                getPlanName(plan);
-
-            const price =
-                getPlanPrice(plan);
-
-            const currency =
-                getPlanCurrency(plan);
-
-            const duration =
-                getPlanDuration(plan);
-
-
-            const option =
-                document.createElement(
-                    "option"
-                );
-
-
-            option.value =
-                phase;
-
-
-            option.textContent =
-                `${name} ` +
-                `(${price} ${currency}/yr` +
-                `${
-                    duration
-                        ? `, ${duration}-Yr`
+              ></div>
+        
+              ${plans.map((plan, index) => {
+                const isActive = index === 0;
+        
+                const phase =
+                  plan.phase ||
+                  plan.slug ||
+                  "";
+        
+                return `
+                  <div
+                    class="pricing__timeline-item ${
+                      isActive
+                        ? "pricing__timeline-item--active"
                         : ""
-                }) - VAT Inclusive`;
-
-
-            select.appendChild(
-                option
-            );
-        });
-
-
-        /* --------------------------------------------------------
-           Restore previous selection if possible
-           -------------------------------------------------------- */
-
-        if (
-            previousValue &&
-            comparisonPlans.some(
-                plan =>
-                    getPlanPhase(plan) ===
-                    previousValue
-            )
-        ) {
-
-            select.value =
-                previousValue;
-
-        } else {
-
-            /* ----------------------------------------------------
-               Default = Standard
-               ---------------------------------------------------- */
-
-            const standardPlan =
-                comparisonPlans.find(
-                    plan =>
-                        getPlanPhase(plan) ===
-                        "standard"
-                );
-
-
-            if (standardPlan) {
-
-                select.value =
-                    getPlanPhase(
-                        standardPlan
-                    );
-
-            } else if (
-                comparisonPlans.length
-            ) {
-
-                /* -----------------------------------------------
-                   Fallback = first comparison plan
-                   ----------------------------------------------- */
-
-                select.value =
-                    getPlanPhase(
-                        comparisonPlans[0]
-                    );
-            }
-        }
-
-
-        /* --------------------------------------------------------
-           Register dropdown change event
-           -------------------------------------------------------- */
-
-        registerPricingDropdownEvent();
-
-
-        /* --------------------------------------------------------
-           Initial synchronization
-           -------------------------------------------------------- */
-
-        syncPaymentCard();
-    }
-
-
-    /* ============================================================
-       DROPDOWN EVENT
-       ============================================================ */
-
-    function registerPricingDropdownEvent() {
-
-        const select =
-            document.getElementById(
-                "pricing-compare-select"
-            );
-
-        if (!select) {
-            return;
-        }
-
-
-        /*
-         * Prevent duplicate event listeners.
-         */
-        if (
-            select.dataset
-                .pricingChangeListener ===
-            "true"
-        ) {
-            return;
-        }
-
-
-        select.addEventListener(
-            "change",
-            function () {
-
-                console.log(
-                    "Pricing selection changed:",
-                    this.value
-                );
-
-
-                /*
-                 * Update timeline active state
-                 */
-                updateTimelineActiveState(
-                    this.value
-                );
-
-
-                /*
-                 * Update payment card
-                 */
-                syncPaymentCard();
-
-
-                /*
-                 * Update savings section
-                 */
-                updatePricingSavings();
-            }
-        );
-
-
-        select.dataset
-            .pricingChangeListener =
-            "true";
-    }
-
-
-    /* ============================================================
-       GET SELECTED PLAN
-       ============================================================ */
-
-    function getSelectedPricingPlan() {
-
-        const select =
-            document.getElementById(
-                "pricing-compare-select"
-            );
-
-        if (
-            !select ||
-            !membershipPlans.length
-        ) {
-            return null;
-        }
-
-
-        const selectedPhase =
-            String(
-                select.value || ""
-            ).trim();
-
-
-        if (!selectedPhase) {
-            return null;
-        }
-
-
-        return (
-            membershipPlans.find(
-                plan =>
-                    getPlanPhase(plan) ===
-                    selectedPhase
-            ) || null
-        );
-    }
-
-
-    /* ============================================================
-       SYNC PAYMENT CARD
-       ============================================================ */
-
-    function syncPaymentCard() {
-
-        const selectedPlan =
-            getSelectedPricingPlan();
-
-
-        if (!selectedPlan) {
-
-            console.warn(
-                "No selected membership plan found."
-            );
-
-            return;
-        }
-
-
-        console.log(
-            "Selected plan for payment card:",
-            selectedPlan
-        );
-
-
-        updatePaymentCard(
-            selectedPlan
-        );
-
-
-        updatePricingSavings();
-    }
-
-
-    /* ============================================================
-       UPDATE PAYMENT CARD
-       ============================================================ */
-
-    function updatePaymentCard(plan) {
-
-        if (!plan) {
-            return;
-        }
-
-
-        /* --------------------------------------------------------
-           Extract plan information
-           -------------------------------------------------------- */
-
-        const name =
-            getPlanName(plan);
-
-        const price =
-            getPlanPrice(plan);
-
-        const currency =
-            getPlanCurrency(plan);
-
-        const duration =
-            getPlanDuration(plan);
-
-        const phase =
-            getPlanPhase(plan);
-
-
-        /* --------------------------------------------------------
-           Calculate annual equivalent rate
-           -------------------------------------------------------- */
-
-        const annualRate =
-            duration > 0
-                ? price / duration
-                : price;
-
-
-        /* --------------------------------------------------------
-           Payment card elements
-           -------------------------------------------------------- */
-
-        const planNameEl =
-            document.getElementById(
-                "membership-plan-name"
-            );
-
-
-        const planDurationLabelEl =
-            document.getElementById(
-                "membership-plan-duration-label"
-            );
-
-
-        const planPriceEl =
-            document.getElementById(
-                "membership-plan-price"
-            );
-
-
-        const membershipNameEl =
-            document.getElementById(
-                "membership-membership-name"
-            );
-
-
-        const durationEl =
-            document.getElementById(
-                "membership-duration"
-            );
-
-
-        const annualRateEl =
-            document.getElementById(
-                "membership-annual-rate"
-            );
-
-
-        const totalEl =
-            document.getElementById(
-                "membership-total"
-            );
-
-
-        const payButtonTextEl =
-            document.getElementById(
-                "membership-pay-btn-text"
-            );
-
-
-        /* --------------------------------------------------------
-           Plan heading
-           -------------------------------------------------------- */
-
-        if (planNameEl) {
-
-            planNameEl.textContent =
-                name;
-        }
-
-
-        /* --------------------------------------------------------
-           Duration label
-           -------------------------------------------------------- */
-
-        if (planDurationLabelEl) {
-
-            planDurationLabelEl.textContent =
-                duration > 0
-                    ? `${duration}-Year ${name}`
-                    : name;
-        }
-
-
-        /* --------------------------------------------------------
-           Main price
-           -------------------------------------------------------- */
-
-        if (planPriceEl) {
-
-            planPriceEl.textContent =
-                `${formatPrice(
-                    price
-                )} ${currency}`;
-        }
-
-
-        /* --------------------------------------------------------
-           Membership name
-           -------------------------------------------------------- */
-
-        if (membershipNameEl) {
-
-            membershipNameEl.textContent =
-                name;
-        }
-
-
-        /* --------------------------------------------------------
-           Duration
-           -------------------------------------------------------- */
-
-        if (durationEl) {
-
-            durationEl.textContent =
-                duration > 0
-                    ? `${duration} Years`
-                    : "—";
-        }
-
-
-        /* --------------------------------------------------------
-           Annual rate
-           -------------------------------------------------------- */
-
-        if (annualRateEl) {
-
-            annualRateEl.textContent =
-                `${formatPrice(
-                    annualRate
-                )} ${currency} / year`;
-        }
-
-
-        /* --------------------------------------------------------
-           Total
-           -------------------------------------------------------- */
-
-        if (totalEl) {
-
-            totalEl.textContent =
-                `${formatPrice(
-                    price
-                )} ${currency}`;
-        }
-
-
-        /* --------------------------------------------------------
-           Pay button text
-           -------------------------------------------------------- */
-
-        if (payButtonTextEl) {
-
-            const founder =
-                isFounderPlan(plan);
-
-
-            const actionText =
-                founder
-                    ? "Become a Founder"
-                    : "Continue with Membership";
-
-
-            payButtonTextEl.textContent =
-                `Pay ${formatPrice(
-                    price
-                )} ${currency} & ${actionText}`;
-        }
-
-
-        /* --------------------------------------------------------
-           Store selected plan on payment button
-           -------------------------------------------------------- */
-
-        const payButton =
-            document.getElementById(
-                "membership-pay-btn"
-            );
-
-
-        if (payButton) {
-
-            payButton.dataset.planId =
-                plan.id || "";
-
-            payButton.dataset.planPhase =
-                phase;
-
-            payButton.dataset.planName =
-                name;
-
-            payButton.dataset.planPrice =
-                String(price);
-
-            payButton.dataset.planCurrency =
-                currency;
-
-            payButton.dataset.planDuration =
-                String(duration);
-        }
-
-
-        /* --------------------------------------------------------
-           Global selected plan
-           -------------------------------------------------------- */
-
-        window.selectedMembershipPlan =
-            plan;
-
-
-        console.log(
-            "Payment card updated:",
-            {
-                phase,
-                name,
-                price,
-                currency,
-                duration,
-                annualRate
-            }
-        );
-    }
-
-
-    /* ============================================================
-       UPDATE TIMELINE ACTIVE STATE
-       ============================================================ */
-
-    function updateTimelineActiveState(
-        selectedPhase
-    ) {
-
-        const timelineItems =
-            document.querySelectorAll(
-                ".pricing__timeline-item"
-            );
-
-
-        timelineItems.forEach(
-            item => {
-
-                const itemPhase =
-                    String(
-                        item.dataset.phase ||
-                        ""
-                    ).trim();
-
-
-                const heading =
-                    item.querySelector(
-                        "h4"
-                    );
-
-
-                const existingBadge =
-                    item.querySelector(
-                        ".badge"
-                    );
-
-
-                if (
-                    itemPhase ===
-                    selectedPhase
-                ) {
-
-                    item.classList.add(
-                        "pricing__timeline-item--active"
-                    );
-
-
-                    if (
-                        !existingBadge &&
-                        heading
-                    ) {
-
-                        heading.insertAdjacentHTML(
-                            "beforeend",
-                            `
+                    }"
+                    data-phase="${escapeHtml(phase)}"
+                  >
+                    <div class="pricing__timeline-marker"></div>
+        
+                    <div class="pricing__timeline-content flex justify-between align-center">
+        
+                      <div>
+                        <h4
+                          class="text-small"
+                          style="font-weight: var(--fw-bold); margin: 0"
+                        >
+                          ${escapeHtml(plan.name || "")}
+        
+                          ${
+                            isActive
+                              ? `
                                 <span
-                                    class="badge"
-                                    style="
-                                        background-color:
-                                            var(--color-secondary-glow);
-                                        color:
-                                            var(--color-secondary);
-                                        font-size:
-                                            0.6rem;
-                                        vertical-align:
-                                            middle;
-                                        margin-left:
-                                            var(--space-4);
-                                    "
+                                  class="badge"
+                                  style="
+                                    background-color: var(--color-secondary-glow);
+                                    color: var(--color-secondary);
+                                    font-size: 0.6rem;
+                                    vertical-align: middle;
+                                    margin-left: var(--space-4);
+                                  "
                                 >
-                                    Active
+                                  Active
                                 </span>
-                            `
-                        );
-                    }
-
-                } else {
-
-                    item.classList.remove(
-                        "pricing__timeline-item--active"
-                    );
-
-
-                    if (
-                        existingBadge
-                    ) {
-
-                        existingBadge.remove();
-                    }
-                }
+                              `
+                              : ""
+                          }
+                        </h4>
+        
+                        <p
+                          class="text-muted text-xs"
+                          style="margin: 0; margin-top: var(--space-4)"
+                        >
+                          ${escapeHtml(plan.description || "")}
+                        </p>
+                      </div>
+        
+                      <div class="text-right">
+                        <span class="pricing__timeline-price">
+                          ${escapeHtml(String(plan.price ?? ""))}
+                          ${escapeHtml(plan.currency || "AED")}/yr
+                        </span>
+        
+                        <span
+                          class="block text-muted"
+                          style="font-size: 0.6rem;"
+                        >
+                          VAT Inclusive
+                        </span>
+                      </div>
+        
+                    </div>
+                  </div>
+                `;
+              }).join("")}
+            `;
+          }
+        
+        
+          function renderPricingCalculator(plans) {
+            const select = document.getElementById(
+              "pricing-compare-select"
+            );
+        
+            if (!select) {
+              console.warn(
+                "pricing-compare-select not found"
+              );
+              return;
             }
-        );
-    }
-
-
-    /* ============================================================
-       UPDATE SAVINGS
-       ============================================================ */
-
-    function updatePricingSavings() {
-
-        const selectedPlan =
-            getSelectedPricingPlan();
-
-
-        if (!selectedPlan) {
-            return;
-        }
-
-
-        const founderPlan =
-            membershipPlans.find(
-                plan =>
-                    isFounderPlan(plan)
-            );
-
-
-        if (!founderPlan) {
-
-            console.warn(
-                "Founder plan not found."
-            );
-
-            return;
-        }
-
-
-        const selectedPrice =
-            getPlanPrice(
-                selectedPlan
-            );
-
-
-        const founderPrice =
-            getPlanPrice(
-                founderPlan
-            );
-
-
-        const selectedDuration =
-            getPlanDuration(
-                selectedPlan
-            );
-
-
-        const founderDuration =
-            getPlanDuration(
-                founderPlan
-            );
-
-
-        /*
-         * Current UI says "Annual Savings".
-         *
-         * Here we calculate the difference between
-         * selected plan price and founder plan price.
-         */
-        const savings =
-            Math.max(
-                selectedPrice -
-                    founderPrice,
-                0
-            );
-
-
-        /*
-         * Extra membership duration
-         */
-        const extraYears =
-            Math.max(
-                selectedDuration -
-                    founderDuration,
-                0
-            );
-
-
-        const savingsAmtEl =
-            document.querySelector(
-                "[data-pricing-savings-amt]"
-            );
-
-
-        const savingsYearsEl =
-            document.querySelector(
-                "[data-pricing-savings-years]"
-            );
-
-
-        if (savingsAmtEl) {
-
-            savingsAmtEl.textContent =
-                formatPrice(
-                    savings
-                );
-        }
-
-
-        if (savingsYearsEl) {
-
-            savingsYearsEl.textContent =
-                String(
-                    extraYears
-                );
-        }
-    }
-
-
-    /* ============================================================
-       PLAN HELPERS
-       ============================================================ */
-
-    function getPlanPhase(plan) {
-
-        if (!plan) {
-            return "";
-        }
-
-
-        return String(
-            plan.code ||
-            plan.phase ||
-            plan.slug ||
-            plan.key ||
-            ""
-        ).trim();
-    }
-
-
-    function getPlanName(plan) {
-
-        if (!plan) {
-            return "Membership";
-        }
-
-
-        return String(
-            plan.name ||
-            plan.title ||
-            ""
-        ).trim();
-    }
-
-
-    function getPlanPrice(plan) {
-
-        if (!plan) {
-            return 0;
-        }
-
-
-        const price =
-            Number(
-                plan.price ??
-                plan.amount ??
-                0
-            );
-
-
-        return Number.isFinite(
-            price
-        )
-            ? price
-            : 0;
-    }
-
-
-    function getPlanCurrency(plan) {
-
-        if (!plan) {
-            return "AED";
-        }
-
-
-        return (
-            plan.currency ||
-            "AED"
-        );
-    }
-
-
-    function getPlanDuration(plan) {
-
-        if (!plan) {
-            return 0;
-        }
-
-
-        const duration =
-            Number(
-                plan.duration ??
-                plan.durationYears ??
-                plan.membershipDuration ??
-                plan.years ??
-                0
-            );
-
-
-        return Number.isFinite(
-            duration
-        )
-            ? duration
-            : 0;
-    }
-
-
-    /* ============================================================
-       FOUNDER CHECK
-       ============================================================ */
-
-    function isFounderPlan(plan) {
-
-        if (!plan) {
-            return false;
-        }
-
-
-        const phase =
-            getPlanPhase(
-                plan
-            ).toLowerCase();
-
-
-        const name =
-            getPlanName(
-                plan
-            ).toLowerCase();
-
-
-        return (
-            phase === "founder" ||
-            name.includes("founder")
-        );
-    }
-
-
-    /* ============================================================
-       FORMAT PRICE
-       ============================================================ */
-
-    function formatPrice(value) {
-
-        const number =
-            Number(value);
-
-
-        if (
-            !Number.isFinite(
-                number
-            )
-        ) {
-            return "0";
-        }
-
-
-        if (
-            Number.isInteger(
-                number
-            )
-        ) {
-            return String(
-                number
-            );
-        }
-
-
-        return number.toFixed(
-            2
-        );
-    }
-
-
-    /* ============================================================
-       ESCAPE HTML
-       ============================================================ */
-
-    function escapeHtml(value) {
-
-        const div =
-            document.createElement(
-                "div"
-            );
-
-
-        div.textContent =
-            String(
-                value ?? ""
-            );
-
-
-        return div.innerHTML;
-    }
-
-
-    /* ============================================================
-       INITIALIZE
-       ============================================================ */
-
-    if (
-        document.readyState ===
-        "loading"
-    ) {
-
-        document.addEventListener(
-            "DOMContentLoaded",
-            renderMembershipPlans,
-            {
-                once: true
+        
+            /*
+             * Clear existing hardcoded options
+             */
+            select.innerHTML = "";
+        
+            /*
+             * Founder is the base price,
+             * so don't show Founder in comparison.
+             */
+            plans
+              .filter((plan) => {
+                const phase =
+                  plan.phase ||
+                  plan.slug ||
+                  "";
+        
+                return phase !== "founder";
+              })
+              .forEach((plan) => {
+                const phase =
+                  plan.phase ||
+                  plan.slug ||
+                  "";
+        
+                const duration =
+                  plan.durationYears ??
+                  plan.duration ??
+                  "";
+        
+                const option =
+                  document.createElement("option");
+        
+                option.value = phase;
+        
+                option.textContent =
+                  `${plan.name} ` +
+                  `(${plan.price} ${plan.currency || "AED"}/yr` +
+                  `${duration ? `, ${duration}-Yr` : ""}` +
+                  `) - VAT Inclusive`;
+        
+                select.appendChild(option);
+              });
+        
+            /*
+             * Default = Standard Membership
+             */
+            const standardPlan = plans.find((plan) => {
+              const phase =
+                plan.phase ||
+                plan.slug ||
+                "";
+        
+              return phase === "standard";
+            });
+        
+            if (standardPlan) {
+              select.value =
+                standardPlan.phase ||
+                standardPlan.slug;
             }
-        );
-
-    } else {
-
-        renderMembershipPlans();
-    }
-</script>
+        
+            /*
+             * Tell PricingTimelineController
+             * to use the newly loaded plans.
+             */
+            if (window.pricingTimelineController) {
+              window.pricingTimelineController.setPlans(
+                plans
+              );
+            }
+          }
+        
+        
+          function escapeHtml(value) {
+            const div = document.createElement("div");
+            div.textContent = value;
+            return div.innerHTML;
+          }
+        
+        
+          if (document.readyState === "loading") {
+            document.addEventListener(
+              "DOMContentLoaded",
+              renderMembershipPlans,
+              { once: true }
+            );
+          } else {
+            renderMembershipPlans();
+          }
+    </script>
 
     <script>
         async function subscribe(e) {
