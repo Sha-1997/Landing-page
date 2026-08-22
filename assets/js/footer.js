@@ -10,6 +10,8 @@ export class FooterController {
     this.socialInstagram = document.getElementById('footer-social-instagram');
 
     this.contactAddressEl = document.getElementById('footer-contact-address');
+    this.contactEmailEl = document.getElementById('footer-contact-email');
+    this.contactPhoneEl = document.getElementById('footer-contact-phone');
     this.contactHoursEl = document.getElementById('footer-contact-hours');
     
     this.backToTopBtn = document.getElementById('back-to-top');
@@ -26,9 +28,9 @@ export class FooterController {
         instagram: 'https://instagram.com/jovianex'
       },
       contact: {
-        email: 'info@jovianex.com',
-        phone: '+971 4 123 4567',
-        address: '📍 Office 101, Innovation Hub, Dubai, UAE',
+        email: '📧 Email: info@jovianex.com',
+        phone: '📞 +971 50 306 2031',
+        address: '📍 Ajman Free Zone United Arab Emirates',
         hours: '🕒 Monday - Friday: 9:00 AM - 6:00 PM (GST)'
       }
     };
@@ -52,9 +54,15 @@ export class FooterController {
 
     // 3. Inject address & schedule working hours
     if (this.contactAddressEl) {
-      this.contactAddressEl.textContent = `${this.config.contact.address} | Email: ${this.config.contact.email} | Phone: ${this.config.contact.phone}`;
+      this.contactAddressEl.textContent = `${this.config.contact.address}`;
     }
-    if (this.contactHoursEl) {
+    if (this.contactEmailEl) {
+      this.contactEmailEl.textContent = this.config.contact.email;
+    }
+     if (this.contactPhoneEl) {
+      this.contactPhoneEl.textContent = this.config.contact.phone;
+    }
+     if (this.contactHoursEl) {
       this.contactHoursEl.textContent = this.config.contact.hours;
     }
 

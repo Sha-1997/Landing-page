@@ -229,6 +229,7 @@
         </div>
 
     </header>
+    
     <!-- MAIN VIEWPORT LANDMARK -->
     <main id="main-content" class="main-content">
 
@@ -3653,21 +3654,49 @@
                 </div>
                 <!-- Platforms -->
                 <div class=" flex flex-column" style="gap:var(--space-12);">
-                    <form class="footer__newsletter-form flex flex-column" style="gap: var(--space-8); margin-top: var(--space-4);" id="footer-newsletter">
-                        <label class="text-xs text-muted" style="font-weight:600;" data-i18n="footer_subscribe">
-                            Subscribe to updates
-                        </label>
-                        <div class="flex" style="gap: var(--space-8);">
-                            <input type="email" id="footer-newsletter-email" class="form-input name-challenge__input text-xs" data-i18n-placeholder="footer_email_placeholder" placeholder="name@domain.com" style="background-color:var(--bg-surface); padding:var(--space-8) var(--space-12);"
-                            required>
-                            <button type="button" class="btn btn-outline text-xs" id="footer-newsletter-btn" style="padding:0 var(--space-12); min-width:80px;" data-i18n="footer_join" onclick="subscribe(event)">
-                                Join
-                            </button>
-                        </div>
-                        <p id="message"></p>
-                        <span id="footer-newsletter-status" class="text-xs" style="display:none; font-weight:600;">
-            </span>
-                    </form>
+                    <form
+    class="footer__newsletter-form flex flex-column"
+    style="gap: var(--space-8); margin-top: var(--space-4);"
+    id="footer-newsletter"
+>
+    <label
+        class="text-xs text-muted"
+        style="font-weight:600;"
+        data-i18n="footer_subscribe"
+    >
+        Subscribe to updates
+    </label>
+
+    <div class="flex" style="gap: var(--space-8);">
+        <input
+            type="email"
+            id="footer-newsletter-email"
+            class="form-input name-challenge__input text-xs"
+            data-i18n-placeholder="footer_email_placeholder"
+            placeholder="name@domain.com"
+            style="background-color:var(--bg-surface); padding:var(--space-8) var(--space-12);"
+            required
+        >
+
+        <button
+            type="submit"
+            class="btn btn-outline text-xs"
+            id="footer-newsletter-btn"
+            style="padding:0 var(--space-12); min-width:80px;"
+            data-i18n="footer_join"
+        >
+            Join
+        </button>
+    </div>
+
+    <p id="message"></p>
+
+    <span
+        id="footer-newsletter-status"
+        class="text-xs"
+        style="display:none; font-weight:600;"
+    ></span>
+</form>
                 </div>
             </div>
             <div class="grid grid-cols-4 footer__columns" style="gap: var(--space-32);">
@@ -3802,22 +3831,22 @@
             </div>
             <!-- Bottom -->
             <div class="flex flex-mobile-column justify-between align-center" style="border-top:1px solid var(--border-color); padding-top:var(--space-20); gap:var(--space-16);">
-                <div class="flex flex-column text-xs text-muted" id="footer-contact-block">
-                    <span id="footer-contact-address" data-i18n="footer_loading_business">
-            Loading business information...
-          </span>
-                    <span id="footer-contact-hours" data-i18n="footer_loading_schedule">
-            Loading working schedules...
-          </span>
-                </div>
+            <div class="flex flex-column text-xs text-muted" id="footer-contact-block" style="gap:4px;">
+
+                  <span id="footer-contact-address">
+                      
+                  </span>
+                  
+
+                  
+
+                  <span id="footer-contact-hours">
+                
+                  </span>
+
+              </div>
                 <div class="flex align-center" style="gap:var(--space-16);">
-                    <select id="footer-lang-selector" class="form-input name-challenge__input text-xs">
-                        <option value="en">English (US)</option>
-                        <option value="ar">العربية</option>
-                        <option value="ml">മലയാളം</option>
-                        <option value="hi">हिन्दी</option>
-                        <option value="ta">தமிழ்</option>
-                    </select>
+                   
                     <p class="text-muted text-xs">
                         © <span id="footer-year"></span>
                         <span data-i18n="footer_rights">
@@ -4084,120 +4113,203 @@ console.log(
           }
     </script>
 
-    <script>
-        async function subscribe(e) {
-          e.preventDefault();
-          const email = document.getElementById("footer-newsletter-email").value;
-    
-          const message = document.getElementById("message");
-          if (!email) {
-            document.getElementById("footer-newsletter-email").focus();
-            return;
-          }
-    
-          try {
-    
-            const response = await fetch(
-              "http://localhost:5000/api/v1/subscribe",
-              {
-                method: "POST",
-    
-                headers: {
-                  "Content-Type": "application/json"
-                },
-    
-                body: JSON.stringify({
-                  email: email
-                })
-              }
-            );
-    
-    
-            const data = await response.json();
-    
-    
-            if (response.ok) {
-    
-              message.innerHTML =
-                "Subscription successful ✅";
-    
-            } else {
-    
-              message.innerHTML =
-                "Something went wrong";
-              message.style.color = "red";
-    
+      <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        /* ============================================================
+          NEWSLETTER SUBSCRIPTION
+          ============================================================ */
+
+        const newsletterForm = document.getElementById("footer-newsletter");
+        const emailInput = document.getElementById("footer-newsletter-email");
+        const submitButton = document.getElementById("footer-newsletter-btn");
+        const message = document.getElementById("message");
+
+        newsletterForm.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const email = emailInput.value.trim();
+
+            if (!email) {
+                emailInput.focus();
+                return;
             }
-    
-    
-          } catch (error) {
-    
-            console.error(error);
-    
-            message.innerHTML =
-              "API connection failed ❌";
-    
-          }
-    
-        }
-    
-    
-        document.addEventListener('DOMContentLoaded', () => {
-          // Target: August 18, 2026 at 11:00 PM (23:00)
-          const launchDate = new Date("2026-08-18T23:00:00").getTime();
-    
-          let timerInterval; // declared up front so it's safe to reference early
-    
-          function updateCountdown() {
+
+            if (!emailInput.checkValidity()) {
+                emailInput.reportValidity();
+                return;
+            }
+
+            const originalButtonText = submitButton.textContent;
+
+            submitButton.disabled = true;
+            submitButton.textContent = "Joining...";
+            message.textContent = "";
+            message.style.color = "";
+
+            try {
+
+                /*
+                * IMPORTANT:
+                * localhost:5000 works only when the browser
+                * can access an API running on the same machine.
+                *
+                * Production:
+                * use your public API/domain.
+                */
+
+                const API_BASE_URL =
+                    window.location.hostname === "localhost"
+                        ? "http://localhost:5000"
+                        : "https://ecosystem.jovianex.com";
+
+                const response = await fetch(
+                    `${API_BASE_URL}/api/v1/subscribe`,
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            email: email
+                        })
+                    }
+                );
+
+                let data = {};
+
+                try {
+                    data = await response.json();
+                } catch (jsonError) {
+                    console.warn("API did not return JSON:", jsonError);
+                }
+
+                if (response.ok) {
+
+                    message.textContent =
+                        data.message || "Subscription successful ✅";
+
+                    message.style.color = "green";
+
+                    emailInput.value = "";
+
+                } else {
+
+                    message.textContent =
+                        data.message || "Something went wrong ❌";
+
+                    message.style.color = "red";
+                }
+
+            } catch (error) {
+
+                console.error("Newsletter subscription error:", error);
+
+                message.textContent =
+                    "Unable to connect to the subscription service ❌";
+
+                message.style.color = "red";
+
+            } finally {
+
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }
+        });
+
+
+        /* ============================================================
+          LAUNCH COUNTDOWN
+          ============================================================ */
+
+        // Target: August 18, 2026 at 11:00 PM
+        const launchDate = new Date("2026-08-18T23:00:00").getTime();
+
+        let timerInterval;
+
+        function updateCountdown() {
+
             const now = new Date().getTime();
             const timeDifference = launchDate - now;
-    
+
             if (timeDifference <= 0) {
-              updateElements('00', '00', '00', '00');
-              if (timerInterval) clearInterval(timerInterval);
-              return;
+
+                updateElements("00", "00", "00", "00");
+
+                if (timerInterval) {
+                    clearInterval(timerInterval);
+                }
+
+                return;
             }
-    
-            // Time calculations
-            const days = String(Math.floor(timeDifference / (1000 * 60 * 60 * 24))).padStart(2, '0');
-            const hours = String(Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
-            const minutes = String(Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
-            const seconds = String(Math.floor((timeDifference % (1000 * 60)) / 1000)).padStart(2, '0');
-    
+
+            const days = String(
+                Math.floor(
+                    timeDifference / (1000 * 60 * 60 * 24)
+                )
+            ).padStart(2, "0");
+
+            const hours = String(
+                Math.floor(
+                    (timeDifference % (1000 * 60 * 60 * 24)) /
+                    (1000 * 60 * 60)
+                )
+            ).padStart(2, "0");
+
+            const minutes = String(
+                Math.floor(
+                    (timeDifference % (1000 * 60 * 60)) /
+                    (1000 * 60)
+                )
+            ).padStart(2, "0");
+
+            const seconds = String(
+                Math.floor(
+                    (timeDifference % (1000 * 60)) /
+                    1000
+                )
+            ).padStart(2, "0");
+
             updateElements(days, hours, minutes, seconds);
-          }
-    
-          function updateElements(d, h, m, s) {
-            // 1. Hero "Launch Countdown" (data-countdown-*)
-            setElementText('[data-countdown-days]', d);
-            setElementText('[data-countdown-hours]', h);
-            setElementText('[data-countdown-minutes]', m);
-            setElementText('[data-countdown-seconds]', s);
-    
-            // 2. Founder "Campaign Closes In" (data-founder-*)
-            setElementText('[data-founder-days]', d);
-            setElementText('[data-founder-hours]', h);
-            setElementText('[data-founder-minutes]', m);
-            setElementText('[data-founder-seconds]', s);
-    
-            // 3. Giveaway "Campaign Closes In" (data-giveaway-*)
-            setElementText('[data-giveaway-days]', d);
-            setElementText('[data-giveaway-hours]', h);
-            setElementText('[data-giveaway-minutes]', m);
-            setElementText('[data-giveaway-seconds]', s);
-          }
-    
-          function setElementText(selector, text) {
+        }
+
+        function updateElements(d, h, m, s) {
+
+            // Hero countdown
+            setElementText("[data-countdown-days]", d);
+            setElementText("[data-countdown-hours]", h);
+            setElementText("[data-countdown-minutes]", m);
+            setElementText("[data-countdown-seconds]", s);
+
+            // Founder countdown
+            setElementText("[data-founder-days]", d);
+            setElementText("[data-founder-hours]", h);
+            setElementText("[data-founder-minutes]", m);
+            setElementText("[data-founder-seconds]", s);
+
+            // Giveaway countdown
+            setElementText("[data-giveaway-days]", d);
+            setElementText("[data-giveaway-hours]", h);
+            setElementText("[data-giveaway-minutes]", m);
+            setElementText("[data-giveaway-seconds]", s);
+        }
+
+        function setElementText(selector, text) {
+
             const elements = document.querySelectorAll(selector);
-            elements.forEach(el => {
-              el.textContent = text;
+
+            elements.forEach((el) => {
+                el.textContent = text;
             });
-          }
-    
-          // Initial Call & Interval Setup
-          updateCountdown();
-          timerInterval = setInterval(updateCountdown, 1000);
-        });
+        }
+
+        // Initial countdown
+        updateCountdown();
+
+        // Update every second
+        timerInterval = setInterval(updateCountdown, 1000);
+
+    });
     </script>
 
     <script>
@@ -4250,7 +4362,11 @@ console.log(
              CONFIG
           ========================================================= */
     
-          const API_BASE = 'http://localhost:5000/api/v1';
+          const API_BASE_URL =
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1"
+        ? "http://localhost:5000"
+        : "https://ecosystem.jovianex.com";
     
           const API_ORIGIN =
             API_BASE.replace('/api/v1', '');
