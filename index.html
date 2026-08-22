@@ -4159,10 +4159,9 @@ console.log(
                 */
 
                 const API_BASE_URL =
-                    window.location.hostname === "localhost" ||
-    window.location.hostname === "127.0.0.1"
-        ? "http://localhost:5000"
-        : "https://ecosystem.jovianex.com";
+                    window.location.hostname === "localhost"
+                        ? "http://localhost:5000"
+                        : "https://ecosystem.jovianex.com";
 
                 const response = await fetch(
                     `${API_BASE_URL}/api/v1/subscribe`,
@@ -4363,11 +4362,7 @@ console.log(
              CONFIG
           ========================================================= */
     
-          const API_BASE_URL =
-    window.location.hostname === "localhost" ||
-    window.location.hostname === "127.0.0.1"
-        ? "http://localhost:5000"
-        : "https://ecosystem.jovianex.com";
+          const API_BASE = 'http://localhost:5000/api/v1';
     
           const API_ORIGIN =
             API_BASE.replace('/api/v1', '');
@@ -7515,10 +7510,7 @@ console.log(
           ========================================================= */
     
           const API_BASE =
-             window.location.hostname === "localhost" ||
-    window.location.hostname === "127.0.0.1"
-        ? "http://localhost:5000"
-        : "https://ecosystem.jovianex.com";
+            'http://localhost:5000/api/v1';
     
           /*
            * Backend:
